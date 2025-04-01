@@ -7500,3 +7500,143 @@
 2025-04-01 03:00:28,267 - INFO - Searching for: tech jobs greenhouse.io
 2025-04-01 03:00:28,838 - ERROR - Error searching with DuckDuckGo for query 'tech jobs greenhouse.io': Connection closed
 2025-04-01 03:00:30,847 - INFO - Scraper finished
+2025-04-01 03:00:42,642 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:00:59,584 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:01:15,242 - INFO - Discovered 0 new companies from search
+2025-04-01 03:01:15,248 - INFO - Saving intermediate batch with 50 companies
+2025-04-01 03:01:15,264 - INFO - Successfully saved 50 companies to batch 001
+2025-04-01 03:01:15,265 - INFO - Pausing for 8.0 seconds
+2025-04-01 03:01:23,248 - INFO - Current batch has 50/100 companies
+2025-04-01 03:01:23,249 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:01:42,216 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:02:00,718 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:02:17,921 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:02:35,507 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:02:54,807 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:03:09,466 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:03:27,561 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:03:45,853 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:04:01,907 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:04:21,103 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:04:35,704 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:04:55,817 - INFO - Searching for: greenhouse job board
+2025-04-01 03:05:13,469 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:05:29,344 - INFO - Discovered 0 new companies from search
+2025-04-01 03:05:29,345 - INFO - Pausing for 9.3 seconds
+2025-04-01 03:05:38,667 - INFO - Current batch has 50/100 companies
+2025-04-01 03:05:38,667 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:05:51,307 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:06:06,750 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:06:26,792 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:06:41,846 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:06:58,831 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:07:19,592 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:07:36,551 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:07:50,078 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:08:09,101 - INFO - Searching for: greenhouse job board
+2025-04-01 03:08:23,992 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:08:38,458 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:08:57,461 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:09:12,723 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:09:27,615 - INFO - Discovered 0 new companies from search
+2025-04-01 03:09:27,616 - INFO - Pausing for 8.8 seconds
+2025-04-01 03:09:36,455 - INFO - Current batch has 50/100 companies
+2025-04-01 03:09:36,456 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:09:50,393 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:10:07,651 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:10:23,806 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:10:41,611 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:10:58,638 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:11:16,891 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:11:30,409 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:11:50,913 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:12:04,686 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:12:36,924 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:12:54,846 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:13:11,752 - INFO - Searching for: greenhouse job board
+2025-04-01 03:13:22,867 - INFO - Discovered board token: reformation (Reformation)
+2025-04-01 03:13:29,137 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:13:48,507 - INFO - Discovered 1 new companies from search
+2025-04-01 03:13:48,512 - INFO - Pausing for 5.7 seconds
+2025-04-01 03:13:54,260 - INFO - Current batch has 51/100 companies
+2025-04-01 03:13:54,260 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:14:09,646 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:14:23,496 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:14:37,214 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:14:57,786 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:15:16,413 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:15:30,762 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:15:47,335 - INFO - Searching for: greenhouse job board
+2025-04-01 03:16:02,879 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:16:22,712 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:16:41,236 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:17:00,054 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:17:18,541 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:17:36,136 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:17:52,106 - INFO - Discovered 0 new companies from search
+2025-04-01 03:17:52,110 - INFO - Pausing for 5.8 seconds
+2025-04-01 03:17:57,879 - INFO - Current batch has 51/100 companies
+2025-04-01 03:17:57,880 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:18:14,970 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:18:32,491 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:18:49,987 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:19:10,703 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:19:29,288 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:19:47,280 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:20:05,179 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:20:24,187 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:20:39,989 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:20:52,911 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:21:09,944 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:21:25,027 - INFO - Searching for: greenhouse job board
+2025-04-01 03:21:41,848 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:21:58,365 - INFO - Discovered 0 new companies from search
+2025-04-01 03:21:58,369 - INFO - Pausing for 6.6 seconds
+2025-04-01 03:22:04,933 - INFO - Current batch has 51/100 companies
+2025-04-01 03:22:04,933 - INFO - Checking tech company list from: https://raw.githubusercontent.com/hankcs/AverageSalaryOfTechCompanies/master/companies.csv
+2025-04-01 03:22:12,412 - INFO - Checking tech company list from: https://raw.githubusercontent.com/krishnadey30/JobTracker/master/Data/companies.csv
+2025-04-01 03:22:20,456 - INFO - Checking tech company list from: https://raw.githubusercontent.com/garethdmm/hn_who_is_hiring_keywords/master/companylist.csv
+2025-04-01 03:22:26,720 - INFO - Checking Y Combinator companies
+2025-04-01 03:22:27,396 - INFO - Discovered 0 new companies from tech lists
+2025-04-01 03:22:27,398 - INFO - Pausing for 9.8 seconds
+2025-04-01 03:22:37,174 - INFO - Current batch has 51/100 companies
+2025-04-01 03:22:37,175 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:22:53,180 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:23:06,796 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:23:20,039 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:23:37,966 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:23:56,284 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:24:13,048 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:24:27,583 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:24:42,344 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:25:03,692 - INFO - Searching for: greenhouse job board
+2025-04-01 03:25:18,941 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:25:37,801 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:25:52,601 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:26:07,754 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:26:27,565 - INFO - Discovered 0 new companies from search
+2025-04-01 03:26:27,570 - INFO - Pausing for 7.6 seconds
+2025-04-01 03:26:35,153 - INFO - Current batch has 51/100 companies
+2025-04-01 03:26:35,153 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:26:55,677 - INFO - Searching for: job opportunities greenhouse
+2025-04-01 03:27:13,527 - INFO - Searching for: greenhouse.io/boards
+2025-04-01 03:27:33,097 - INFO - Searching for: tech jobs greenhouse.io
+2025-04-01 03:27:46,798 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:28:04,366 - INFO - Searching for: apply greenhouse.io
+2025-04-01 03:28:24,490 - INFO - Searching for: jobs greenhouse.io
+2025-04-01 03:28:38,807 - INFO - Searching for: tech company jobs greenhouse
+2025-04-01 03:28:54,017 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:29:13,939 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:29:29,317 - INFO - Searching for: careers greenhouse.io
+2025-04-01 03:29:47,966 - INFO - Searching for: greenhouse job board
+2025-04-01 03:30:04,190 - INFO - Searching for: startup careers greenhouse
+2025-04-01 03:30:22,020 - INFO - Searching for: careers data science greenhouse
+2025-04-01 03:30:38,874 - INFO - Discovered 0 new companies from search
+2025-04-01 03:30:38,875 - INFO - Pausing for 5.8 seconds
+2025-04-01 03:30:44,654 - INFO - Current batch has 51/100 companies
+2025-04-01 03:30:44,654 - INFO - Searching for: site:boards.greenhouse.io
+2025-04-01 03:31:01,248 - INFO - Searching for: greenhouse job board
+2025-04-01 03:31:17,908 - INFO - Searching for: careers machine learning greenhouse
+2025-04-01 03:31:35,670 - INFO - Searching for: careers software engineering greenhouse
+2025-04-01 03:31:53,562 - INFO - Searching for: engineering jobs greenhouse
+2025-04-01 03:32:09,132 - INFO - Searching for: apply greenhouse.io
