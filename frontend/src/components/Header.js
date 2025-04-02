@@ -1,10 +1,27 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaRobot, FaBriefcase, FaClipboardList } from 'react-icons/fa';
 
 const Header = () => {
+  const pathname = usePathname();
+  const [queueCount, setQueueCount] = useState(0);
+  
+  // Check if there are jobs in the queue
+  useEffect(() => {
+    try {
+      const storedJobs = localStorage.getItem('queuedJobs');
+      if (storedJobs) {
+        const jobs = JSON.parse(storedJobs);
+        setQueueCount(jobs.length);
+      }
+    } catch (error) {
+      console.error('Error reading queue count:', error);
+    }
+  }, []);
+
   return (
     <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,13 +32,22 @@ const Header = () => {
               <span className="ml-2 text-xl font-bold text-gray-900">HIGHRES</span>
             </div>
             <nav className="ml-6 flex space-x-8">
-              <Link href="/" className="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
+              <Link href="/" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                pathname === '/' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}>
                 <FaBriefcase className="mr-1" />
                 Jobs
               </Link>
-              <Link href="/queue" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              <Link href="/queue" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                pathname === '/queue' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}>
                 <FaClipboardList className="mr-1" />
                 My Queue
+                {queueCount > 0 && (
+                  <span className="ml-1 px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-800">
+                    {queueCount}
+                  </span>
+                )}
               </Link>
             </nav>
           </div>

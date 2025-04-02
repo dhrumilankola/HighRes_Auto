@@ -81,29 +81,34 @@ export default function Home() {
 
     try {
       setLoading(true);
-      // In production, you'd submit to a real API endpoint
-      const response = await fetch('/api/queue', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ jobs: jobsToQueue }),
-      });
       
-      if (response.ok) {
-        setQueueSubmitted(true);
-        
-        // In a real app, you'd likely redirect to a queue status page
-        // For now, we'll just clear the selected jobs after a delay
-        setTimeout(() => {
-          setSelectedJobs([]);
-          setQueueSubmitted(false);
-          setLoading(false);
-        }, 1500);
-      } else {
-        console.error('Error submitting jobs to queue:', await response.text());
-        setLoading(false);
+      // Save the selected jobs to localStorage for the queue page to access
+      localStorage.setItem('queuedJobs', JSON.stringify(jobsToQueue));
+      
+      // Also try to post to API if available
+      try {
+        await fetch('/api/queue', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ jobs: jobsToQueue }),
+        });
+      } catch (apiError) {
+        console.warn('API call failed, but jobs saved to localStorage:', apiError);
       }
+      
+      setQueueSubmitted(true);
+      
+      // In a real app, you'd likely redirect to the queue status page
+      setTimeout(() => {
+        setSelectedJobs([]);
+        setQueueSubmitted(false);
+        setLoading(false);
+        
+        // Redirect to queue page
+        window.location.href = '/queue';
+      }, 1500);
     } catch (error) {
       console.error('Error submitting jobs to queue:', error);
       setLoading(false);
@@ -158,6 +163,9 @@ export default function Home() {
                   Showing {jobs.length} jobs
                 </div>
               </div>
+              <p className="text-gray-600 mt-2 mb-4">
+                Browse through the available positions and select the jobs you want to apply for. Our system will handle the application process for you.
+              </p>
             </div>
 
             <JobList 
