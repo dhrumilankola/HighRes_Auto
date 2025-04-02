@@ -1,2 +1,5 @@
-/Greenhouse scrapper/.env
-/Greenhouse scrapper/company_scraper.log
+/job_scraper/.env
+/job_scraper/company_scraper.log
+/agent/venv
+/agent/.env
+/agent/__pycache__

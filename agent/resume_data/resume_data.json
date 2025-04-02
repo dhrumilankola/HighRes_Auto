@@ -1,0 +1,101 @@
+{
+    "personal_info": {
+      "name": "Sai Sreekar Sarvepalli",
+      "email": "sreekapplications@gmail.com",
+      "phone": "+1 (971)-287-9087",
+      "linkedin": "linkedin.com/in/sreekar-sarvepalli-353685177",
+      "portfolio": "portfolio-next-plum-two.vercel.app"
+    },
+    "summary": "Master’s in Computer Science student with strong proficiency in Python, JavaScript, Scala, and a solid foundation in data structures, algorithms, and operating systems. Experienced in developing scalable full-stack applications, robust backend systems, and data-driven solutions using frameworks like React.js, Node.js, and Apache Spark. Skilled in Web3 technologies (smart contracts, blockchain integration) and AI/ML frameworks (TensorFlow, PyTorch, Hugging Face) for building intelligent applications. Adept at working with cloud services (AWS), designing interactive dashboards, and optimizing large-scale data pipelines.",
+    "education": [
+      {
+        "degree": "MS in Computer Science",
+        "university": "University of California, Riverside",
+        "dates": "September 2023 - March 2025 (Expected)",
+        "gpa": "3.66/4",
+        "location": "Riverside, CA"
+      },
+      {
+        "degree": "B.Tech in Computer Science",
+        "university": "Vellore Institute of Technology",
+        "dates": "2019 - 2023",
+        "gpa": "8.23/10",
+        "location": "Chennai, India"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Student Researcher",
+        "company": "UCR Big Data Lab",
+        "dates": "August 2024 – March 2025 (Expected)",
+        "bullets": [
+          "Enhanced BEAST by integrating Scala-based APIs for optimized data retrieval and indexing",
+          "Refactored data pipelines using Apache Spark, reducing processing time by 50%",
+          "Developed AI-driven data aggregation layers for complex geospatial queries",
+          "Built custom APIs and microservices for geospatial data analysis"
+        ]
+      },
+      {
+        "title": "SDE Intern",
+        "company": "Coding Sheep LLP",
+        "dates": "December 2021 – April 2022",
+        "bullets": [
+          "Developed full-stack NFT Marketplace using Next.js/Node.js",
+          "Created cross-chain bridge connecting Ethereum and BSC",
+          "Authored secure smart contracts reducing gas fees by 25%"
+        ]
+      },
+      {
+        "title": "Software Developer Intern",
+        "company": "XEGGO",
+        "dates": "September 2021 – November 2021",
+        "bullets": [
+          "Developed money streaming protocol SDK using Web3.js",
+          "Enhanced codebase efficiency by 30%",
+          "Created comprehensive developer documentation"
+        ]
+      }
+    ],
+    "skills": {
+      "languages": ["C/C++", "Python", "Scala", "JavaScript", "TypeScript", "Java"],
+      "frameworks": ["Apache Spark", "React.js", "Node.js", "Express.js", "Django", "Flask"],
+      "cloud": ["AWS", "Heroku"],
+      "databases": ["MongoDB", "PostgreSQL", "GraphQL", "PostGIS", "MySQL"],
+      "tools": ["IntelliJ IDEA", "VSCode", "Linux Stack", "Jupyter", "Postman"]
+    },
+    "projects": [
+      {
+        "name": "Chicago Crime Analysis",
+        "technologies": ["Scala", "Apache Spark", "React.js", "PostGIS"],
+        "description": "Analyzed 10GB+ crime data with SparkSQL, built interactive visualization dashboard",
+        "link": "Project Link"
+      },
+      {
+        "name": "Study Buddy - Berkeley CalHacks",
+        "technologies": ["React.js", "Hume AI", "LangChain", "Google Gemma"],
+        "description": "AI tutoring agent with 90% response accuracy using RAG system",
+        "link": "Project Link"
+      },
+      {
+        "name": "InsureSearch",
+        "technologies": ["Next.js", "Llama 3", "Flask"],
+        "description": "AI document retrieval system improving accuracy by 35%",
+        "link": "Project Link"
+      }
+    ],
+    "honors": [
+      "FileCoin Accelerator - $5000 Grant",
+      "ETHGlobal Hackathon Special Mention"
+    ],
+    "predefined_answers": {
+      "Will you require sponsorship now or in the future?": "Yes",
+      "Are you able to work right now/do you have work authorization?": "Yes",
+      "Do you agree to be part of the talent community?": "Yes",
+      "Have you been referred?": "Yes",
+      "Gender": "Male",
+      "Pronouns": "He/Him",
+      "Are you Hispanic/Latino?": "No",
+      "Ethnicity": "Asian/South Asian",
+      "Are you a veteran?": "No"
+    }
+  }
