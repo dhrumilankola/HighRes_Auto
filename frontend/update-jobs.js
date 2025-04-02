@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Source path for tech_jobs.json
-const sourcePath = path.join(__dirname, '../../job_scraper/tech_jobs.json');
+const sourcePath = path.join(__dirname, '../job_scraper/tech_jobs.json');
 
 // Destination path in public/job_data directory
 const destDir = path.join(__dirname, 'public/job_data');
