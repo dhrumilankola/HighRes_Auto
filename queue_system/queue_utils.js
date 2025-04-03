@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Define paths for queue files
-const QUEUE_DIR = path.join(__dirname);
+const QUEUE_DIR = path.join(process.cwd(), 'queue_system');
 const QUEUED_PATH = path.join(QUEUE_DIR, 'queued.json');
 const IN_PROGRESS_PATH = path.join(QUEUE_DIR, 'in_progress.json');
 const APPLIED_PATH = path.join(QUEUE_DIR, 'applied.json');

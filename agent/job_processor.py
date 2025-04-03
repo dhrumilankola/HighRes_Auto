@@ -1,6 +1,7 @@
 # agent/job_processor.py
 
 import asyncio
+import os
 import time
 import logging
 import traceback
@@ -27,6 +28,8 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger("job_processor")
+
+
 
 async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool, str, Optional[Dict[str, Any]]]:
     """
@@ -55,6 +58,9 @@ async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool
                 # Wait for page to load
                 await computer.page.wait_for_load_state("networkidle", timeout=30000)
                 logger.info("✅ Page loaded")
+                
+                screenshot_path = await take_screenshot(computer.page, "initial_state")
+                logger.info(f"Initial page screenshot saved to {screenshot_path}")
                 
                 # Check if the page has expected application form elements
                 has_form = await check_for_application_form(computer.page)
@@ -107,10 +113,11 @@ async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool
         logger.error(f"Browser session error: {str(e)}\n{error_details}")
         return False, f"Browser session error: {str(e)}", {"error_details": error_details}
 
-async def take_screenshot(page) -> str:
+async def take_screenshot(page, label="job"):
     """Take a screenshot and return as base64 string."""
     try:
-        screenshot_path = f"screenshots/job_{int(time.time())}.png"
+        import os  # Make sure this import is at the top of the file
+        screenshot_path = f"screenshots/{label}_{int(time.time())}.png"
         os.makedirs(os.path.dirname(screenshot_path), exist_ok=True)
         await page.screenshot(path=screenshot_path)
         return screenshot_path
@@ -151,6 +158,21 @@ async def check_required_fields(page) -> list:
         value = await element.evaluate("el => el.value")
         
         if not value:
+            # Enhanced debugging: get more element details
+            details = await element.evaluate("""el => {
+                return {
+                    tagName: el.tagName,
+                    id: el.id,
+                    name: el.name,
+                    type: el.type,
+                    className: el.className,
+                    placeholder: el.placeholder,
+                    labels: Array.from(el.labels || []).map(l => l.textContent)
+                }
+            }""")
+            
+            logger.info(f"Missing required field details: {details}")
+            
             # Try to get a description of the field
             label = await element.evaluate("""el => {
                 if (el.labels && el.labels.length > 0) {

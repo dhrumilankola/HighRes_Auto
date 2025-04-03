@@ -1,5 +1,3 @@
-// src/app/queue/page.js
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -49,6 +47,24 @@ export default function QueuePage() {
     }
   };
 
+  const requeueJob = async (jobId) => {
+    try {
+      const response = await fetch(`/api/queue/jobs/${jobId}/requeue`, {
+        method: 'POST'
+      });
+      
+      if (response.ok) {
+        // Refresh the job list
+        fetchJobs();
+      } else {
+        const data = await response.json();
+        console.error('Error requeuing job:', data.message);
+      }
+    } catch (error) {
+      console.error('Error requeuing job:', error);
+    }
+  };
+
   const renderJobList = (jobList, status) => {
     if (!jobList || jobList.length === 0) {
       return (
@@ -91,6 +107,13 @@ export default function QueuePage() {
               <div className="text-xs text-blue-500 mt-2 border-t pt-2">
                 Notes: {job.notes}
               </div>
+            )}
+            {job.status === 'manual_review' && (
+              <button 
+                className="text-xs bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
+                onClick={() => requeueJob(job.id)}>
+                Requeue
+              </button>
             )}
           </div>
         ))}

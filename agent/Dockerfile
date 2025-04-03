@@ -1,6 +1,6 @@
 # agent/Dockerfile
 
-FROM mcr.microsoft.com/playwright:latest
+FROM mcr.microsoft.com/playwright:v1.35.0-jammy
 
 WORKDIR /app
 
