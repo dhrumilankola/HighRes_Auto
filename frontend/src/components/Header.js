@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaRobot, FaBriefcase, FaClipboardList } from 'react-icons/fa';
+import { FaRobot, FaBriefcase, FaClipboardList, FaFileAlt } from 'react-icons/fa';
 
 const Header = () => {
   const pathname = usePathname();
@@ -49,12 +49,18 @@ const Header = () => {
                   </span>
                 )}
               </Link>
+              <Link href="/resume" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                pathname === '/resume' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}>
+                <FaFileAlt className="mr-1" />
+                My Resume
+              </Link>
             </nav>
           </div>
           <div className="flex items-center">
             <button
               type="button"
-              className="btn-primary"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Get Started
             </button>
