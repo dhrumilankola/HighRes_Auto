@@ -3,3 +3,4 @@
 /agent/venv
 /agent/.env
 /agent/__pycache__
+/queue_system/venv
