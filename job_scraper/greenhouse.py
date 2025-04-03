@@ -744,8 +744,32 @@ def create_job_listing(raw_job: Dict[str, Any], config: Dict[str, Any]) -> Optio
     job_url = raw_job.get('absolute_url', '')
     apply_url = f"https://boards.greenhouse.io/{company_token}/jobs/{job_id}" if company_token else ''
     
-    # Create content snippet
-    content_snippet = content[:500] + '...' if content and len(content) > 500 else content
+    # Clean and create content snippet
+    content_snippet = ""
+    if content:
+        try:
+            # Decode HTML entities (convert &lt; to <, &gt; to >, etc.)
+            import html
+            decoded_content = html.unescape(content)
+            
+            # Use BeautifulSoup to remove all HTML tags
+            soup = BeautifulSoup(decoded_content, "html.parser")
+            for script in soup(["script", "style"]):
+                script.extract()  # Remove these completely
+            
+            # Get text and normalize whitespace
+            plain_text = soup.get_text(separator=" ", strip=True)
+            plain_text = re.sub(r'\s+', ' ', plain_text).strip()
+            
+            # Create limited-length snippet
+            content_snippet = plain_text[:500] + '...' if len(plain_text) > 500 else plain_text
+        except Exception as e:
+            logger.warning(f"Error parsing content HTML for job {job_id}: {str(e)}")
+            # Fallback to regex HTML tag and entity removal
+            plain_text = re.sub(r'<[^>]+>', ' ', content)  # Remove HTML tags
+            plain_text = re.sub(r'&[#a-zA-Z0-9]+;', ' ', plain_text)  # Remove HTML entities
+            plain_text = re.sub(r'\s+', ' ', plain_text).strip()  # Normalize whitespace
+            content_snippet = plain_text[:500] + '...' if len(plain_text) > 500 else plain_text
     
     # Fetch full content from job page if needed
     content_full = ""
@@ -1061,26 +1085,25 @@ def save_jobs_to_file(jobs: List[JobListing], output_prefix: str) -> None:
     except Exception as e:
         logger.error(f"Error saving jobs to file: {str(e)}")
 
-def generate_job_report(jobs: List[JobListing], output_prefix: str, config: Dict) -> None:
+def generate_job_report(jobs: List[JobListing], output_prefix: str) -> None:
     """
     Generate a detailed report about the jobs.
-
+    
     Args:
         jobs: List of JobListing objects.
         output_prefix: Prefix for output filenames.
-        config: Dictionary containing filter options like max_years, remote_only, etc.
     """
     try:
         # Company distribution
         company_counts = {}
         for job in jobs:
             company_counts[job.company] = company_counts.get(job.company, 0) + 1
-
+        
         # Role category distribution
         role_counts = {}
         for job in jobs:
             role_counts[job.role_category] = role_counts.get(job.role_category, 0) + 1
-
+        
         # Location distribution
         location_counts = {'remote': 0, 'us': 0, 'other': 0}
         for job in jobs:
@@ -1090,13 +1113,13 @@ def generate_job_report(jobs: List[JobListing], output_prefix: str, config: Dict
                 location_counts['us'] += 1
             else:
                 location_counts['other'] += 1
-
+        
         # Tech stack distribution
         tech_counts = {}
         for job in jobs:
             for tech in job.tech_stack:
                 tech_counts[tech] = tech_counts.get(tech, 0) + 1
-
+        
         # Experience requirement distribution
         exp_counts = {'required': 0, 'not_specified': 0}
         exp_distribution = {'0': 0, '1': 0, '2': 0, '3': 0}
@@ -1104,20 +1127,21 @@ def generate_job_report(jobs: List[JobListing], output_prefix: str, config: Dict
             if job.experience_required:
                 exp_counts['required'] += 1
                 if job.experience_years is not None:
+                    # Map to closest year bucket
                     year_bucket = min(3, max(0, int(job.experience_years)))
                     exp_distribution[str(year_bucket)] += 1
             else:
                 exp_counts['not_specified'] += 1
-
+        
         # Salary distribution
         salary_ranges = []
         for job in jobs:
             if job.salary_min and job.salary_max:
                 salary_ranges.append((job.salary_min, job.salary_max))
-
+        
         avg_min = sum(min_sal for min_sal, _ in salary_ranges) / len(salary_ranges) if salary_ranges else 0
         avg_max = sum(max_sal for _, max_sal in salary_ranges) / len(salary_ranges) if salary_ranges else 0
-
+        
         # Generate the report
         report_str = "# Job Analysis Report\n\n"
         report_str += f"Analysis of {len(jobs)} tech jobs\n\n"
@@ -1130,43 +1154,43 @@ def generate_job_report(jobs: List[JobListing], output_prefix: str, config: Dict
         if config.get('specific_tech'):
             report_str += f"- Required tech: {', '.join(config.get('specific_tech'))}\n"
         report_str += "\n"
-
+        
         report_str += "## Company Distribution\n"
         for company, count in sorted(company_counts.items(), key=lambda x: x[1], reverse=True)[:20]:
             report_str += f"- {company}: {count} jobs ({count/len(jobs)*100:.1f}%)\n"
-
+        
         report_str += "\n## Role Category Distribution\n"
         for role, count in sorted(role_counts.items(), key=lambda x: x[1], reverse=True):
             report_str += f"- {role.replace('_', ' ')}: {count} jobs ({count/len(jobs)*100:.1f}%)\n"
-
+        
         report_str += "\n## Location Distribution\n"
         for loc, count in location_counts.items():
             report_str += f"- {loc}: {count} jobs ({count/len(jobs)*100:.1f}%)\n"
-
+        
         report_str += "\n## Top 20 Tech Skills\n"
         for tech, count in sorted(tech_counts.items(), key=lambda x: x[1], reverse=True)[:20]:
             report_str += f"- {tech}: {count} jobs ({count/len(jobs)*100:.1f}%)\n"
-
+        
         report_str += "\n## Experience Requirements\n"
         for category, count in exp_counts.items():
             report_str += f"- {category}: {count} jobs ({count/len(jobs)*100:.1f}%)\n"
-
+        
         report_str += "\n### Experience Distribution\n"
         for years, count in sorted(exp_distribution.items()):
             report_str += f"- {years} year(s): {count} jobs\n"
-
+        
         if salary_ranges:
             report_str += "\n## Salary Information\n"
             report_str += f"- Jobs with salary info: {len(salary_ranges)} ({len(salary_ranges)/len(jobs)*100:.1f}%)\n"
             report_str += f"- Average salary range: ${avg_min:.0f} - ${avg_max:.0f}\n"
-
+        
         # Save the report
         report_filename = f"{output_prefix}_report.md"
         with open(report_filename, 'w', encoding='utf-8') as f:
             f.write(report_str)
-
+        
         logger.info(f"Successfully generated job report: {report_filename}")
-
+        
     except Exception as e:
         logger.error(f"Error generating job report: {str(e)}")
 

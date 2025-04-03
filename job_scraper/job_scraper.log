@@ -14899,3 +14899,413 @@
 2025-04-01 03:08:24,849 - INFO - Successfully saved 113 jobs to tech_jobs.json
 2025-04-01 03:08:24,857 - INFO - Successfully saved 113 jobs to tech_jobs.csv
 2025-04-01 03:08:25,035 - INFO - Successfully saved 113 jobs to tech_jobs.xlsx
+2025-04-02 02:54:53,492 - INFO - Loaded 82 companies from E:\Projects\Graduate\Auto Apply\job_scraper\output\greenhouse_companies_batch_001.csv
+2025-04-02 02:54:54,526 - INFO - Found 22 jobs for ClassDojo (token: classdojo)
+2025-04-02 02:54:54,527 - INFO - Progress: 1/82 companies processed
+2025-04-02 02:54:54,563 - INFO - Found 0 jobs for ClimateAI (token: climateai)
+2025-04-02 02:54:54,624 - INFO - Found 10 jobs for Afresh (token: afresh)
+2025-04-02 02:54:54,652 - INFO - Found 64 jobs for Ambient Enterprises (token: ambiententerprises)
+2025-04-02 02:54:54,721 - INFO - Found 6 jobs for Campus Opportunities (token: campusopportunities)
+2025-04-02 02:54:54,728 - INFO - Progress: 2/82 companies processed
+2025-04-02 02:54:54,762 - INFO - Found 19 jobs for Axios (token: axios)
+2025-04-02 02:54:54,785 - INFO - Found 19 jobs for ALX Africa (token: alxafrica)
+2025-04-02 02:54:54,801 - INFO - Found 39 jobs for Clipboard Health (token: clipboardhealth)
+2025-04-02 02:54:54,833 - INFO - Found 14 jobs for Chewy Fulfillment Centers (token: fulfillment)
+2025-04-02 02:54:54,881 - INFO - Found 8 jobs for Cloud Chamber (token: cloudchamberen)
+2025-04-02 02:54:54,930 - INFO - Progress: 3/82 companies processed
+2025-04-02 02:54:55,014 - INFO - Found 194 jobs for Curaleaf  (token: curaleaf)
+2025-04-02 02:54:55,033 - INFO - Found 18 jobs for Dr. Squatch (token: drsquatch)
+2025-04-02 02:54:55,134 - INFO - Progress: 4/82 companies processed
+2025-04-02 02:54:55,145 - INFO - Found 16 jobs for DMS.tech (token: dms)
+2025-04-02 02:54:55,157 - INFO - Found 28 jobs for Elite Technology (token: elitetechnology)
+2025-04-02 02:54:55,199 - INFO - Found 0 jobs for DataScience  (token: datascience)
+2025-04-02 02:54:55,348 - INFO - Progress: 5/82 companies processed
+2025-04-02 02:54:55,358 - INFO - Found 39 jobs for Demandbase (token: demandbase)
+2025-04-02 02:54:55,393 - INFO - Found 31 jobs for Freeform (token: freeformfuturecorp)
+2025-04-02 02:54:55,404 - INFO - Found 34 jobs for DataCamp (token: datacamp)
+2025-04-02 02:54:55,477 - INFO - Found 9 jobs for Evolutionary Scale (token: evolutionaryscale)
+2025-04-02 02:54:55,551 - INFO - Progress: 6/82 companies processed
+2025-04-02 02:54:55,583 - INFO - Found 1 jobs for ExecOnline (token: execonline)
+2025-04-02 02:54:55,655 - INFO - Found 6 jobs for Financial Technology Partners (token: financialtechnologypartners)
+2025-04-02 02:54:55,786 - INFO - Progress: 7/82 companies processed
+2025-04-02 02:54:55,786 - INFO - Found 186 jobs for DEPT® (token: dept)
+2025-04-02 02:54:55,804 - INFO - Found 51 jobs for G-P (token: globalizationpartners)
+2025-04-02 02:54:55,813 - INFO - Found 78 jobs for Gusto, Inc. (token: gusto)
+2025-04-02 02:54:55,889 - INFO - Found 41 jobs for HavenHub (token: havenhub)
+2025-04-02 02:54:55,901 - INFO - Found 47 jobs for GoFundMe (token: gofundme)
+2025-04-02 02:54:55,910 - INFO - Found 17 jobs for Good Job Games (token: goodjobgames)
+2025-04-02 02:54:55,990 - INFO - Progress: 8/82 companies processed
+2025-04-02 02:54:56,055 - INFO - Found 7 jobs for Infinite Commerce (token: infinitecommerce)
+2025-04-02 02:54:56,102 - INFO - Found 26 jobs for HoYoverse (token: hoyoverse)
+2025-04-02 02:54:56,124 - INFO - Found 50 jobs for Headway (token: headway)
+2025-04-02 02:54:56,138 - INFO - Found 32 jobs for Hightouch (token: hightouch)
+2025-04-02 02:54:56,194 - INFO - Found 14 jobs for HeyGen (token: heygen)
+2025-04-02 02:54:56,194 - INFO - Progress: 9/82 companies processed
+2025-04-02 02:54:56,257 - INFO - Found 24 jobs for Inversion (token: inversionspace)
+2025-04-02 02:54:56,398 - INFO - Progress: 10/82 companies processed
+2025-04-02 02:54:56,449 - INFO - Found 175 jobs for Jane Street (token: janestreet)
+2025-04-02 02:54:56,576 - INFO - Found 8 jobs for JetZero (token: jetzero)
+2025-04-02 02:54:56,601 - INFO - Progress: 11/82 companies processed
+2025-04-02 02:54:56,738 - INFO - Found 1 jobs for LMN (token: lmn)
+2025-04-02 02:54:56,755 - INFO - Found 14 jobs for Mill (token: mill)
+2025-04-02 02:54:56,797 - INFO - Found 110 jobs for Kyo (token: kyocare)
+2025-04-02 02:54:56,803 - INFO - Found 8 jobs for NPR (token: nationalpublicradioinc)
+2025-04-02 02:54:56,804 - INFO - Progress: 12/82 companies processed
+2025-04-02 02:54:56,818 - INFO - Found 44 jobs for LivePerson (token: liveperson)
+2025-04-02 02:54:56,827 - INFO - Found 3 jobs for Iridia, Inc. (token: iridiainc)
+2025-04-02 02:54:56,847 - INFO - Found 42 jobs for Misfits Market (token: misfitsmarket)
+2025-04-02 02:54:56,883 - INFO - Found 40 jobs for LA28 (token: la2028)
+2025-04-02 02:54:57,028 - INFO - Found 27 jobs for PSA (Professional Sports Authenticator) (token: psacard)
+2025-04-02 02:54:57,028 - INFO - Progress: 13/82 companies processed
+2025-04-02 02:54:57,066 - INFO - Found 1 jobs for Nextdoor Campus (token: nextdoorcampus)
+2025-04-02 02:54:57,108 - INFO - Found 17 jobs for PDT Partners (token: pdtpartners)
+2025-04-02 02:54:57,117 - INFO - Found 39 jobs for Obsidian Security (token: obsidiansecurity)
+2025-04-02 02:54:57,149 - INFO - Found 7 jobs for Passport Brand Design  (token: passportbranddesign)
+2025-04-02 02:54:57,187 - INFO - Found 25 jobs for Parallel (token: paralleljobs)
+2025-04-02 02:54:57,232 - INFO - Progress: 14/82 companies processed
+2025-04-02 02:54:57,438 - INFO - Progress: 15/82 companies processed
+2025-04-02 02:54:57,507 - INFO - Found 187 jobs for Rocket Lab USA (token: rocketlab)
+2025-04-02 02:54:57,519 - INFO - Found 108 jobs for Reformation (token: reformation)
+2025-04-02 02:54:57,612 - INFO - Found 40 jobs for Reserv (token: reserv)
+2025-04-02 02:54:57,641 - INFO - Progress: 16/82 companies processed
+2025-04-02 02:54:57,675 - INFO - Found 67 jobs for OneTrust (token: onetrust)
+2025-04-02 02:54:57,698 - INFO - Found 21 jobs for Raft Company Website (token: raft)
+2025-04-02 02:54:57,788 - INFO - Found 94 jobs for Rockstar Games (token: rockstargames)
+2025-04-02 02:54:57,808 - INFO - Found 48 jobs for Retool (token: retool)
+2025-04-02 02:54:57,880 - INFO - Progress: 17/82 companies processed
+2025-04-02 02:54:57,900 - INFO - Found 32 jobs for Salsify (token: salsify)
+2025-04-02 02:54:58,035 - INFO - Found 185 jobs for Scale AI (token: scaleai)
+2025-04-02 02:54:58,053 - INFO - Found 7 jobs for Scythe Robotics (token: scytherobotics)
+2025-04-02 02:54:58,077 - INFO - Found 187 jobs for PlayStation Global (token: sonyinteractiveentertainmentglobal)
+2025-04-02 02:54:58,082 - INFO - Progress: 18/82 companies processed
+2025-04-02 02:54:58,109 - INFO - Found 120 jobs for Silverado (token: silverado)
+2025-04-02 02:54:58,214 - INFO - Found 47 jobs for Silvus Technologies (token: silvus)
+2025-04-02 02:54:58,216 - INFO - Found 3 jobs for SingleSprout (token: singlesprout)
+2025-04-02 02:54:58,244 - INFO - Found 7 jobs for Service Champions (token: servicechampions)
+2025-04-02 02:54:58,283 - INFO - Progress: 19/82 companies processed
+2025-04-02 02:54:58,448 - INFO - Found 11 jobs for The Weather Company (token: theweathercompany)
+2025-04-02 02:54:58,467 - INFO - Found 68 jobs for StubHub (token: stubhubinc)
+2025-04-02 02:54:58,481 - INFO - Found 23 jobs for StockX (token: stockx)
+2025-04-02 02:54:58,485 - INFO - Progress: 20/82 companies processed
+2025-04-02 02:54:58,488 - INFO - Found 8 jobs for Supernal (token: supernal)
+2025-04-02 02:54:58,528 - INFO - Found 12 jobs for Swish Analytics (token: swishanalytics)
+2025-04-02 02:54:58,591 - INFO - Found 18 jobs for Sustainable Talent (token: sustainabletalent)
+2025-04-02 02:54:58,687 - INFO - Progress: 21/82 companies processed
+2025-04-02 02:54:58,808 - INFO - Found 22 jobs for Tia (token: tia)
+2025-04-02 02:54:58,890 - INFO - Progress: 22/82 companies processed
+2025-04-02 02:54:58,902 - INFO - Found 110 jobs for Twilio (token: twilio)
+2025-04-02 02:54:58,906 - INFO - Found 34 jobs for Turing (token: turing)
+2025-04-02 02:54:58,934 - INFO - Found 0 jobs for Warner Bros. Pictures Animation (token: wbpa)
+2025-04-02 02:54:58,951 - INFO - Found 5 jobs for TwinStar Credit Union (token: twinstar)
+2025-04-02 02:54:59,000 - INFO - Found 109 jobs for WelbeHealth (token: welbehealth)
+2025-04-02 02:54:59,025 - INFO - Found 3 jobs for Warp (token: warp)
+2025-04-02 02:54:59,091 - INFO - Progress: 23/82 companies processed
+2025-04-02 02:54:59,097 - INFO - Found 10 jobs for Visual Concepts (token: visualconcepts)
+2025-04-02 02:54:59,143 - INFO - Found 5 jobs for Wild Alaskan Company (token: wildalaskancompany)
+2025-04-02 02:54:59,235 - INFO - Found 7 jobs for insitro (token: insitro)
+2025-04-02 02:54:59,252 - INFO - Found 103 jobs for xAI (token: xai)
+2025-04-02 02:54:59,292 - INFO - Progress: 24/82 companies processed
+2025-04-02 02:54:59,420 - INFO - Found 32 jobs for iHerb (token: iherb)
+2025-04-02 02:54:59,493 - INFO - Progress: 25/82 companies processed
+2025-04-02 02:54:59,695 - INFO - Progress: 26/82 companies processed
+2025-04-02 02:54:59,897 - INFO - Progress: 27/82 companies processed
+2025-04-02 02:55:00,097 - INFO - Progress: 28/82 companies processed
+2025-04-02 02:55:00,298 - INFO - Progress: 29/82 companies processed
+2025-04-02 02:55:00,499 - INFO - Progress: 30/82 companies processed
+2025-04-02 02:55:00,702 - INFO - Progress: 31/82 companies processed
+2025-04-02 02:55:00,904 - INFO - Progress: 32/82 companies processed
+2025-04-02 02:55:01,107 - INFO - Progress: 33/82 companies processed
+2025-04-02 02:55:01,310 - INFO - Progress: 34/82 companies processed
+2025-04-02 02:55:01,511 - INFO - Progress: 35/82 companies processed
+2025-04-02 02:55:01,713 - INFO - Progress: 36/82 companies processed
+2025-04-02 02:55:01,916 - INFO - Progress: 37/82 companies processed
+2025-04-02 02:55:02,118 - INFO - Progress: 38/82 companies processed
+2025-04-02 02:55:02,320 - INFO - Progress: 39/82 companies processed
+2025-04-02 02:55:02,523 - INFO - Progress: 40/82 companies processed
+2025-04-02 02:55:02,725 - INFO - Progress: 41/82 companies processed
+2025-04-02 02:55:02,927 - INFO - Progress: 42/82 companies processed
+2025-04-02 02:55:03,128 - INFO - Progress: 43/82 companies processed
+2025-04-02 02:55:03,331 - INFO - Progress: 44/82 companies processed
+2025-04-02 02:55:03,532 - INFO - Progress: 45/82 companies processed
+2025-04-02 02:55:03,732 - INFO - Progress: 46/82 companies processed
+2025-04-02 02:55:03,934 - INFO - Progress: 47/82 companies processed
+2025-04-02 02:55:04,137 - INFO - Progress: 48/82 companies processed
+2025-04-02 02:55:04,340 - INFO - Progress: 49/82 companies processed
+2025-04-02 02:55:04,542 - INFO - Progress: 50/82 companies processed
+2025-04-02 02:55:04,743 - INFO - Progress: 51/82 companies processed
+2025-04-02 02:55:04,946 - INFO - Progress: 52/82 companies processed
+2025-04-02 02:55:05,149 - INFO - Progress: 53/82 companies processed
+2025-04-02 02:55:05,351 - INFO - Progress: 54/82 companies processed
+2025-04-02 02:55:05,553 - INFO - Progress: 55/82 companies processed
+2025-04-02 02:55:05,754 - INFO - Progress: 56/82 companies processed
+2025-04-02 02:55:05,957 - INFO - Progress: 57/82 companies processed
+2025-04-02 02:55:06,158 - INFO - Progress: 58/82 companies processed
+2025-04-02 02:55:06,361 - INFO - Progress: 59/82 companies processed
+2025-04-02 02:55:06,563 - INFO - Progress: 60/82 companies processed
+2025-04-02 02:55:06,765 - INFO - Progress: 61/82 companies processed
+2025-04-02 02:55:06,968 - INFO - Progress: 62/82 companies processed
+2025-04-02 02:55:07,170 - INFO - Progress: 63/82 companies processed
+2025-04-02 02:55:07,373 - INFO - Progress: 64/82 companies processed
+2025-04-02 02:55:07,576 - INFO - Progress: 65/82 companies processed
+2025-04-02 02:55:07,778 - INFO - Progress: 66/82 companies processed
+2025-04-02 02:55:07,981 - INFO - Progress: 67/82 companies processed
+2025-04-02 02:55:08,183 - INFO - Progress: 68/82 companies processed
+2025-04-02 02:55:08,385 - INFO - Progress: 69/82 companies processed
+2025-04-02 02:55:08,586 - INFO - Progress: 70/82 companies processed
+2025-04-02 02:55:08,789 - INFO - Progress: 71/82 companies processed
+2025-04-02 02:55:08,991 - INFO - Progress: 72/82 companies processed
+2025-04-02 02:55:09,194 - INFO - Progress: 73/82 companies processed
+2025-04-02 02:55:09,396 - INFO - Progress: 74/82 companies processed
+2025-04-02 02:55:09,598 - INFO - Progress: 75/82 companies processed
+2025-04-02 02:55:09,801 - INFO - Progress: 76/82 companies processed
+2025-04-02 02:55:10,002 - INFO - Progress: 77/82 companies processed
+2025-04-02 02:55:10,204 - INFO - Progress: 78/82 companies processed
+2025-04-02 02:55:10,405 - INFO - Progress: 79/82 companies processed
+2025-04-02 02:55:10,608 - INFO - Progress: 80/82 companies processed
+2025-04-02 02:55:10,810 - INFO - Progress: 81/82 companies processed
+2025-04-02 02:55:11,011 - INFO - Progress: 82/82 companies processed
+2025-04-02 02:55:11,214 - INFO - Fetched a total of 3444 jobs from 82 companies
+2025-04-02 02:55:12,440 - INFO - Processed 100/3444 jobs...
+2025-04-02 02:55:12,930 - INFO - Processed 200/3444 jobs...
+2025-04-02 02:55:12,931 - INFO - Processed 300/3444 jobs...
+2025-04-02 02:55:15,881 - INFO - Processed 400/3444 jobs...
+2025-04-02 02:55:23,070 - INFO - Processed 500/3444 jobs...
+2025-04-02 02:55:25,177 - INFO - Processed 600/3444 jobs...
+2025-04-02 02:55:27,255 - INFO - Processed 700/3444 jobs...
+2025-04-02 02:55:27,388 - INFO - Processed 800/3444 jobs...
+2025-04-02 02:55:27,417 - INFO - Processed 900/3444 jobs...
+2025-04-02 02:55:29,502 - INFO - Processed 1000/3444 jobs...
+2025-04-02 02:55:31,339 - INFO - Processed 1100/3444 jobs...
+2025-04-02 02:55:31,365 - INFO - Processed 1200/3444 jobs...
+2025-04-02 02:55:31,373 - INFO - Processed 1300/3444 jobs...
+2025-04-02 02:55:32,345 - INFO - Processed 1400/3444 jobs...
+2025-04-02 02:55:35,698 - INFO - Processed 1500/3444 jobs...
+2025-04-02 02:55:36,723 - INFO - Processed 1600/3444 jobs...
+2025-04-02 02:55:41,218 - INFO - Processed 1700/3444 jobs...
+2025-04-02 02:55:41,291 - INFO - Processed 1800/3444 jobs...
+2025-04-02 02:55:41,382 - INFO - Processed 1900/3444 jobs...
+2025-04-02 02:55:41,384 - INFO - Processed 2000/3444 jobs...
+2025-04-02 02:55:41,600 - INFO - Processed 2100/3444 jobs...
+2025-04-02 02:55:42,752 - INFO - Processed 2200/3444 jobs...
+2025-04-02 02:55:43,274 - ERROR - Error processing job 7109562002: bad character range \s-, at position 7
+2025-04-02 02:55:43,406 - INFO - Processed 2300/3444 jobs...
+2025-04-02 02:55:45,416 - INFO - Processed 2400/3444 jobs...
+2025-04-02 02:55:47,381 - INFO - Processed 2500/3444 jobs...
+2025-04-02 02:55:47,385 - INFO - Processed 2600/3444 jobs...
+2025-04-02 02:55:47,430 - INFO - Processed 2700/3444 jobs...
+2025-04-02 02:55:49,766 - INFO - Processed 2800/3444 jobs...
+2025-04-02 02:55:53,558 - INFO - Processed 2900/3444 jobs...
+2025-04-02 02:55:56,226 - INFO - Processed 3000/3444 jobs...
+2025-04-02 02:55:56,229 - INFO - Processed 3100/3444 jobs...
+2025-04-02 02:55:56,252 - INFO - Processed 3200/3444 jobs...
+2025-04-02 02:55:56,628 - INFO - Processed 3300/3444 jobs...
+2025-04-02 02:55:56,699 - INFO - Processed 3400/3444 jobs...
+2025-04-02 02:55:56,702 - INFO - Filtered to 37 recent tech jobs
+2025-04-02 02:55:56,705 - INFO - Successfully saved 37 jobs to tech_jobs.json
+2025-04-02 02:55:56,710 - INFO - Successfully saved 37 jobs to tech_jobs.csv
+2025-04-02 02:55:56,838 - INFO - Successfully saved 37 jobs to tech_jobs.xlsx
+2025-04-02 03:05:24,173 - INFO - Loaded 82 companies from E:\Projects\Graduate\Auto Apply\job_scraper\output\greenhouse_companies_batch_001.csv
+2025-04-02 03:05:25,081 - INFO - Found 19 jobs for Axios (token: axios)
+2025-04-02 03:05:25,082 - INFO - Progress: 1/82 companies processed
+2025-04-02 03:05:25,177 - INFO - Found 19 jobs for ALX Africa (token: alxafrica)
+2025-04-02 03:05:25,181 - INFO - Found 14 jobs for Chewy Fulfillment Centers (token: fulfillment)
+2025-04-02 03:05:25,214 - INFO - Found 6 jobs for Campus Opportunities (token: campusopportunities)
+2025-04-02 03:05:25,253 - INFO - Found 64 jobs for Ambient Enterprises (token: ambiententerprises)
+2025-04-02 03:05:25,257 - INFO - Found 10 jobs for Afresh (token: afresh)
+2025-04-02 03:05:25,281 - INFO - Found 39 jobs for Clipboard Health (token: clipboardhealth)
+2025-04-02 03:05:25,283 - INFO - Progress: 2/82 companies processed
+2025-04-02 03:05:25,288 - INFO - Found 22 jobs for ClassDojo (token: classdojo)
+2025-04-02 03:05:25,448 - INFO - Found 0 jobs for DataScience  (token: datascience)
+2025-04-02 03:05:25,490 - INFO - Progress: 3/82 companies processed
+2025-04-02 03:05:25,511 - INFO - Found 0 jobs for ClimateAI (token: climateai)
+2025-04-02 03:05:25,616 - INFO - Found 34 jobs for DataCamp (token: datacamp)
+2025-04-02 03:05:25,671 - INFO - Found 16 jobs for DMS.tech (token: dms)
+2025-04-02 03:05:25,698 - INFO - Found 28 jobs for Elite Technology (token: elitetechnology)
+2025-04-02 03:05:25,698 - INFO - Progress: 4/82 companies processed
+2025-04-02 03:05:25,720 - INFO - Found 8 jobs for Cloud Chamber (token: cloudchamberen)
+2025-04-02 03:05:25,744 - INFO - Found 39 jobs for Demandbase (token: demandbase)
+2025-04-02 03:05:25,853 - INFO - Found 194 jobs for Curaleaf  (token: curaleaf)
+2025-04-02 03:05:25,872 - INFO - Found 186 jobs for DEPT® (token: dept)
+2025-04-02 03:05:25,904 - INFO - Progress: 5/82 companies processed
+2025-04-02 03:05:25,913 - INFO - Found 18 jobs for Dr. Squatch (token: drsquatch)
+2025-04-02 03:05:26,030 - INFO - Found 9 jobs for Evolutionary Scale (token: evolutionaryscale)
+2025-04-02 03:05:26,105 - INFO - Progress: 6/82 companies processed
+2025-04-02 03:05:26,128 - INFO - Found 51 jobs for G-P (token: globalizationpartners)
+2025-04-02 03:05:26,143 - INFO - Found 47 jobs for GoFundMe (token: gofundme)
+2025-04-02 03:05:26,167 - INFO - Found 31 jobs for Freeform (token: freeformfuturecorp)
+2025-04-02 03:05:26,202 - INFO - Found 78 jobs for Gusto, Inc. (token: gusto)
+2025-04-02 03:05:26,210 - INFO - Found 6 jobs for Financial Technology Partners (token: financialtechnologypartners)
+2025-04-02 03:05:26,270 - INFO - Found 17 jobs for Good Job Games (token: goodjobgames)
+2025-04-02 03:05:26,309 - INFO - Progress: 7/82 companies processed
+2025-04-02 03:05:26,368 - INFO - Found 41 jobs for HavenHub (token: havenhub)
+2025-04-02 03:05:26,484 - INFO - Found 1 jobs for ExecOnline (token: execonline)
+2025-04-02 03:05:26,486 - INFO - Found 32 jobs for Hightouch (token: hightouch)
+2025-04-02 03:05:26,503 - INFO - Found 24 jobs for Inversion (token: inversionspace)
+2025-04-02 03:05:26,512 - INFO - Progress: 8/82 companies processed
+2025-04-02 03:05:26,528 - INFO - Found 14 jobs for HeyGen (token: heygen)
+2025-04-02 03:05:26,598 - INFO - Found 7 jobs for Infinite Commerce (token: infinitecommerce)
+2025-04-02 03:05:26,613 - INFO - Found 50 jobs for Headway (token: headway)
+2025-04-02 03:05:26,660 - INFO - Found 26 jobs for HoYoverse (token: hoyoverse)
+2025-04-02 03:05:26,715 - INFO - Progress: 9/82 companies processed
+2025-04-02 03:05:26,724 - INFO - Found 8 jobs for JetZero (token: jetzero)
+2025-04-02 03:05:26,819 - INFO - Found 40 jobs for LA28 (token: la2028)
+2025-04-02 03:05:26,845 - INFO - Found 1 jobs for LMN (token: lmn)
+2025-04-02 03:05:26,894 - INFO - Found 3 jobs for Iridia, Inc. (token: iridiainc)
+2025-04-02 03:05:26,919 - INFO - Progress: 10/82 companies processed
+2025-04-02 03:05:26,991 - INFO - Found 175 jobs for Jane Street (token: janestreet)
+2025-04-02 03:05:27,113 - INFO - Found 110 jobs for Kyo (token: kyocare)
+2025-04-02 03:05:27,120 - INFO - Found 14 jobs for Mill (token: mill)
+2025-04-02 03:05:27,121 - INFO - Progress: 11/82 companies processed
+2025-04-02 03:05:27,132 - INFO - Found 44 jobs for LivePerson (token: liveperson)
+2025-04-02 03:05:27,243 - INFO - Found 39 jobs for Obsidian Security (token: obsidiansecurity)
+2025-04-02 03:05:27,248 - INFO - Found 1 jobs for Nextdoor Campus (token: nextdoorcampus)
+2025-04-02 03:05:27,263 - INFO - Found 8 jobs for NPR (token: nationalpublicradioinc)
+2025-04-02 03:05:27,308 - INFO - Found 42 jobs for Misfits Market (token: misfitsmarket)
+2025-04-02 03:05:27,333 - INFO - Progress: 12/82 companies processed
+2025-04-02 03:05:27,513 - INFO - Found 25 jobs for Parallel (token: paralleljobs)
+2025-04-02 03:05:27,536 - INFO - Progress: 13/82 companies processed
+2025-04-02 03:05:27,547 - INFO - Found 27 jobs for PSA (Professional Sports Authenticator) (token: psacard)
+2025-04-02 03:05:27,562 - INFO - Found 67 jobs for OneTrust (token: onetrust)
+2025-04-02 03:05:27,737 - INFO - Progress: 14/82 companies processed
+2025-04-02 03:05:27,739 - INFO - Found 7 jobs for Passport Brand Design  (token: passportbranddesign)
+2025-04-02 03:05:27,744 - INFO - Found 17 jobs for PDT Partners (token: pdtpartners)
+2025-04-02 03:05:27,829 - INFO - Found 187 jobs for PlayStation Global (token: sonyinteractiveentertainmentglobal)
+2025-04-02 03:05:27,838 - INFO - Found 21 jobs for Raft Company Website (token: raft)
+2025-04-02 03:05:27,851 - INFO - Found 108 jobs for Reformation (token: reformation)
+2025-04-02 03:05:27,905 - INFO - Found 40 jobs for Reserv (token: reserv)
+2025-04-02 03:05:27,944 - INFO - Found 187 jobs for Rocket Lab USA (token: rocketlab)
+2025-04-02 03:05:27,945 - INFO - Progress: 15/82 companies processed
+2025-04-02 03:05:27,956 - INFO - Found 48 jobs for Retool (token: retool)
+2025-04-02 03:05:28,026 - INFO - Found 7 jobs for Service Champions (token: servicechampions)
+2025-04-02 03:05:28,058 - INFO - Found 94 jobs for Rockstar Games (token: rockstargames)
+2025-04-02 03:05:28,146 - INFO - Found 32 jobs for Salsify (token: salsify)
+2025-04-02 03:05:28,148 - INFO - Progress: 16/82 companies processed
+2025-04-02 03:05:28,265 - INFO - Found 120 jobs for Silverado (token: silverado)
+2025-04-02 03:05:28,268 - INFO - Found 7 jobs for Scythe Robotics (token: scytherobotics)
+2025-04-02 03:05:28,351 - INFO - Progress: 17/82 companies processed
+2025-04-02 03:05:28,422 - INFO - Found 3 jobs for SingleSprout (token: singlesprout)
+2025-04-02 03:05:28,474 - INFO - Found 185 jobs for Scale AI (token: scaleai)
+2025-04-02 03:05:28,541 - INFO - Found 8 jobs for Supernal (token: supernal)
+2025-04-02 03:05:28,554 - INFO - Progress: 18/82 companies processed
+2025-04-02 03:05:28,594 - INFO - Found 68 jobs for StubHub (token: stubhubinc)
+2025-04-02 03:05:28,606 - INFO - Found 18 jobs for Sustainable Talent (token: sustainabletalent)
+2025-04-02 03:05:28,622 - INFO - Found 47 jobs for Silvus Technologies (token: silvus)
+2025-04-02 03:05:28,639 - INFO - Found 23 jobs for StockX (token: stockx)
+2025-04-02 03:05:28,668 - INFO - Found 12 jobs for Swish Analytics (token: swishanalytics)
+2025-04-02 03:05:28,756 - INFO - Progress: 19/82 companies processed
+2025-04-02 03:05:28,802 - INFO - Found 22 jobs for Tia (token: tia)
+2025-04-02 03:05:28,828 - INFO - Found 5 jobs for TwinStar Credit Union (token: twinstar)
+2025-04-02 03:05:28,856 - INFO - Found 0 jobs for Warner Bros. Pictures Animation (token: wbpa)
+2025-04-02 03:05:28,887 - INFO - Found 11 jobs for The Weather Company (token: theweathercompany)
+2025-04-02 03:05:28,938 - INFO - Found 34 jobs for Turing (token: turing)
+2025-04-02 03:05:28,960 - INFO - Progress: 20/82 companies processed
+2025-04-02 03:05:29,045 - INFO - Found 10 jobs for Visual Concepts (token: visualconcepts)
+2025-04-02 03:05:29,089 - INFO - Found 110 jobs for Twilio (token: twilio)
+2025-04-02 03:05:29,116 - INFO - Found 5 jobs for Wild Alaskan Company (token: wildalaskancompany)
+2025-04-02 03:05:29,163 - INFO - Progress: 21/82 companies processed
+2025-04-02 03:05:29,168 - INFO - Found 3 jobs for Warp (token: warp)
+2025-04-02 03:05:29,231 - INFO - Found 109 jobs for WelbeHealth (token: welbehealth)
+2025-04-02 03:05:29,253 - INFO - Found 32 jobs for iHerb (token: iherb)
+2025-04-02 03:05:29,338 - INFO - Found 103 jobs for xAI (token: xai)
+2025-04-02 03:05:29,364 - INFO - Progress: 22/82 companies processed
+2025-04-02 03:05:29,424 - INFO - Found 7 jobs for insitro (token: insitro)
+2025-04-02 03:05:29,567 - INFO - Progress: 23/82 companies processed
+2025-04-02 03:05:29,769 - INFO - Progress: 24/82 companies processed
+2025-04-02 03:05:29,970 - INFO - Progress: 25/82 companies processed
+2025-04-02 03:05:30,173 - INFO - Progress: 26/82 companies processed
+2025-04-02 03:05:30,375 - INFO - Progress: 27/82 companies processed
+2025-04-02 03:05:30,578 - INFO - Progress: 28/82 companies processed
+2025-04-02 03:05:30,779 - INFO - Progress: 29/82 companies processed
+2025-04-02 03:05:30,981 - INFO - Progress: 30/82 companies processed
+2025-04-02 03:05:31,184 - INFO - Progress: 31/82 companies processed
+2025-04-02 03:05:31,386 - INFO - Progress: 32/82 companies processed
+2025-04-02 03:05:31,589 - INFO - Progress: 33/82 companies processed
+2025-04-02 03:05:31,791 - INFO - Progress: 34/82 companies processed
+2025-04-02 03:05:31,992 - INFO - Progress: 35/82 companies processed
+2025-04-02 03:05:32,193 - INFO - Progress: 36/82 companies processed
+2025-04-02 03:05:32,395 - INFO - Progress: 37/82 companies processed
+2025-04-02 03:05:32,596 - INFO - Progress: 38/82 companies processed
+2025-04-02 03:05:32,799 - INFO - Progress: 39/82 companies processed
+2025-04-02 03:05:33,001 - INFO - Progress: 40/82 companies processed
+2025-04-02 03:05:33,204 - INFO - Progress: 41/82 companies processed
+2025-04-02 03:05:33,406 - INFO - Progress: 42/82 companies processed
+2025-04-02 03:05:33,609 - INFO - Progress: 43/82 companies processed
+2025-04-02 03:05:33,812 - INFO - Progress: 44/82 companies processed
+2025-04-02 03:05:34,015 - INFO - Progress: 45/82 companies processed
+2025-04-02 03:05:34,217 - INFO - Progress: 46/82 companies processed
+2025-04-02 03:05:34,419 - INFO - Progress: 47/82 companies processed
+2025-04-02 03:05:34,620 - INFO - Progress: 48/82 companies processed
+2025-04-02 03:05:34,822 - INFO - Progress: 49/82 companies processed
+2025-04-02 03:05:35,025 - INFO - Progress: 50/82 companies processed
+2025-04-02 03:05:35,227 - INFO - Progress: 51/82 companies processed
+2025-04-02 03:05:35,429 - INFO - Progress: 52/82 companies processed
+2025-04-02 03:05:35,632 - INFO - Progress: 53/82 companies processed
+2025-04-02 03:05:35,834 - INFO - Progress: 54/82 companies processed
+2025-04-02 03:05:36,036 - INFO - Progress: 55/82 companies processed
+2025-04-02 03:05:36,239 - INFO - Progress: 56/82 companies processed
+2025-04-02 03:05:36,441 - INFO - Progress: 57/82 companies processed
+2025-04-02 03:05:36,643 - INFO - Progress: 58/82 companies processed
+2025-04-02 03:05:36,846 - INFO - Progress: 59/82 companies processed
+2025-04-02 03:05:37,047 - INFO - Progress: 60/82 companies processed
+2025-04-02 03:05:37,250 - INFO - Progress: 61/82 companies processed
+2025-04-02 03:05:37,453 - INFO - Progress: 62/82 companies processed
+2025-04-02 03:05:37,655 - INFO - Progress: 63/82 companies processed
+2025-04-02 03:05:37,858 - INFO - Progress: 64/82 companies processed
+2025-04-02 03:05:38,061 - INFO - Progress: 65/82 companies processed
+2025-04-02 03:05:38,263 - INFO - Progress: 66/82 companies processed
+2025-04-02 03:05:38,466 - INFO - Progress: 67/82 companies processed
+2025-04-02 03:05:38,668 - INFO - Progress: 68/82 companies processed
+2025-04-02 03:05:38,870 - INFO - Progress: 69/82 companies processed
+2025-04-02 03:05:39,071 - INFO - Progress: 70/82 companies processed
+2025-04-02 03:05:39,273 - INFO - Progress: 71/82 companies processed
+2025-04-02 03:05:39,475 - INFO - Progress: 72/82 companies processed
+2025-04-02 03:05:39,677 - INFO - Progress: 73/82 companies processed
+2025-04-02 03:05:39,880 - INFO - Progress: 74/82 companies processed
+2025-04-02 03:05:40,082 - INFO - Progress: 75/82 companies processed
+2025-04-02 03:05:40,285 - INFO - Progress: 76/82 companies processed
+2025-04-02 03:05:40,487 - INFO - Progress: 77/82 companies processed
+2025-04-02 03:05:40,689 - INFO - Progress: 78/82 companies processed
+2025-04-02 03:05:40,892 - INFO - Progress: 79/82 companies processed
+2025-04-02 03:05:41,094 - INFO - Progress: 80/82 companies processed
+2025-04-02 03:05:41,296 - INFO - Progress: 81/82 companies processed
+2025-04-02 03:05:41,497 - INFO - Progress: 82/82 companies processed
+2025-04-02 03:05:41,698 - INFO - Fetched a total of 3444 jobs from 82 companies
+2025-04-02 03:05:41,704 - INFO - Processed 100/3444 jobs...
+2025-04-02 03:05:43,356 - INFO - Processed 200/3444 jobs...
+2025-04-02 03:05:46,566 - INFO - Processed 300/3444 jobs...
+2025-04-02 03:05:48,382 - INFO - Processed 400/3444 jobs...
+2025-04-02 03:05:51,790 - INFO - Processed 500/3444 jobs...
+2025-04-02 03:05:53,492 - INFO - Processed 600/3444 jobs...
+2025-04-02 03:05:53,497 - INFO - Processed 700/3444 jobs...
+2025-04-02 03:05:53,840 - INFO - Processed 800/3444 jobs...
+2025-04-02 03:05:58,543 - INFO - Processed 900/3444 jobs...
+2025-04-02 03:05:59,881 - INFO - Processed 1000/3444 jobs...
+2025-04-02 03:05:59,968 - INFO - Processed 1100/3444 jobs...
+2025-04-02 03:06:01,581 - INFO - Processed 1200/3444 jobs...
+2025-04-02 03:06:01,588 - INFO - Processed 1300/3444 jobs...
+2025-04-02 03:06:01,602 - INFO - Processed 1400/3444 jobs...
+2025-04-02 03:06:02,771 - INFO - Processed 1500/3444 jobs...
+2025-04-02 03:06:06,784 - INFO - Processed 1600/3444 jobs...
+2025-04-02 03:06:06,787 - INFO - Processed 1700/3444 jobs...
+2025-04-02 03:06:11,796 - INFO - Processed 1800/3444 jobs...
+2025-04-02 03:06:11,800 - INFO - Processed 1900/3444 jobs...
+2025-04-02 03:06:13,112 - INFO - Processed 2000/3444 jobs...
+2025-04-02 03:06:13,114 - INFO - Processed 2100/3444 jobs...
+2025-04-02 03:06:13,205 - INFO - Processed 2200/3444 jobs...
+2025-04-02 03:06:13,320 - INFO - Processed 2300/3444 jobs...
+2025-04-02 03:06:13,326 - INFO - Processed 2400/3444 jobs...
+2025-04-02 03:06:13,923 - ERROR - Error processing job 7109562002: bad character range \s-, at position 7
+2025-04-02 03:06:14,180 - INFO - Processed 2500/3444 jobs...
+2025-04-02 03:06:16,356 - INFO - Processed 2600/3444 jobs...
+2025-04-02 03:06:17,397 - INFO - Processed 2700/3444 jobs...
+2025-04-02 03:06:19,543 - INFO - Processed 2800/3444 jobs...
+2025-04-02 03:06:25,770 - INFO - Processed 2900/3444 jobs...
+2025-04-02 03:06:25,868 - INFO - Processed 3000/3444 jobs...
+2025-04-02 03:06:25,870 - INFO - Processed 3100/3444 jobs...
+2025-04-02 03:06:26,649 - INFO - Processed 3200/3444 jobs...
+2025-04-02 03:06:26,655 - INFO - Processed 3300/3444 jobs...
+2025-04-02 03:06:26,668 - INFO - Processed 3400/3444 jobs...
+2025-04-02 03:06:26,675 - INFO - Filtered to 37 recent tech jobs
+2025-04-02 03:06:26,680 - INFO - Successfully saved 37 jobs to tech_jobs.json
+2025-04-02 03:06:26,689 - INFO - Successfully saved 37 jobs to tech_jobs.csv
+2025-04-02 03:06:26,833 - INFO - Successfully saved 37 jobs to tech_jobs.xlsx
