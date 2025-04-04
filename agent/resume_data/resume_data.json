@@ -1,9 +1,9 @@
 {
     "personal_info": {
-      "name": "Sai Sreekar Sarvepalli",
-      "email": "sreekapplications@gmail.com",
-      "phone": "+1 (971)-287-9087",
-      "linkedin": "linkedin.com/in/sreekar-sarvepalli-353685177",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "phone": "+1 (961)-222-4444",
+      "linkedin": "linkedin.com/in/john-doe-353685177",
       "portfolio": "portfolio-next-plum-two.vercel.app"
     },
     "summary": "Master’s in Computer Science student with strong proficiency in Python, JavaScript, Scala, and a solid foundation in data structures, algorithms, and operating systems. Experienced in developing scalable full-stack applications, robust backend systems, and data-driven solutions using frameworks like React.js, Node.js, and Apache Spark. Skilled in Web3 technologies (smart contracts, blockchain integration) and AI/ML frameworks (TensorFlow, PyTorch, Hugging Face) for building intelligent applications. Adept at working with cloud services (AWS), designing interactive dashboards, and optimizing large-scale data pipelines.",

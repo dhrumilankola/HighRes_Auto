@@ -15,9 +15,18 @@ export default function QueuePage() {
       setLoading(true);
       const response = await fetch(`/api/queue/jobs?status=${activeTab}`);
       const data = await response.json();
-      setJobs(data.jobs);
+      
+      // Properly format the data based on activeTab
+      if (activeTab === 'all') {
+        setJobs(data.jobs || {});
+      } else {
+        // Ensure we have an array for specific statuses
+        setJobs(Array.isArray(data.jobs) ? data.jobs : []);
+      }
     } catch (error) {
       console.error('Error fetching jobs:', error);
+      // Set appropriate default value based on tab
+      setJobs(activeTab === 'all' ? {} : []);
     } finally {
       setLoading(false);
     }
@@ -66,18 +75,22 @@ export default function QueuePage() {
   };
 
   const renderJobList = (jobList, status) => {
-    if (!jobList || jobList.length === 0) {
+    // Ensure jobList is always an array before trying to use .map()
+    const safeJobList = Array.isArray(jobList) ? jobList : [];
+    
+    if (safeJobList.length === 0) {
       return (
         <div className="text-center py-10 text-gray-500">
           No jobs with status: {status}
         </div>
       );
     }
-
+  
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {jobList.map((job) => (
+        {safeJobList.map((job) => (
           <div key={job.id} className="card p-4">
+            {/* Job card content remains the same */}
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-lg font-semibold text-gray-900 truncate">
                 {job.job_data.title}
@@ -106,6 +119,18 @@ export default function QueuePage() {
             {job.notes && (
               <div className="text-xs text-blue-500 mt-2 border-t pt-2">
                 Notes: {job.notes}
+              </div>
+            )}
+            {job.status === 'applied' && job.screenshot && (
+              <div className="mt-2 pt-2 border-t">
+                <a 
+                  href={`/api/screenshots/${job.screenshot.split('/').pop()}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  <FaCheck className="mr-1" /> See Proof
+                </a>
               </div>
             )}
             {job.status === 'manual_review' && (

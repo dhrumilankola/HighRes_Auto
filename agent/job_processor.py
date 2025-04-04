@@ -59,9 +59,6 @@ async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool
                 await computer.page.wait_for_load_state("networkidle", timeout=30000)
                 logger.info("✅ Page loaded")
                 
-                screenshot_path = await take_screenshot(computer.page, "initial_state")
-                logger.info(f"Initial page screenshot saved to {screenshot_path}")
-                
                 # Check if the page has expected application form elements
                 has_form = await check_for_application_form(computer.page)
                 if not has_form:
@@ -92,16 +89,42 @@ async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool
                 submit_button = await find_submit_button(computer.page)
                 if not submit_button:
                     logger.warning("❌ Submit button not found")
-                    screenshot = await take_screenshot(computer.page)
-                    return False, "Submit button not found", {"screenshot": screenshot}
+                    return False, "Submit button not found", {"screenshot": ""}
                 
-                # For testing purposes, we'll log success without actually submitting
-                # In production, you would uncomment the line below to submit the form
-                # await submit_button.click()
+                # Actually submit the form
+                await submit_button.click()
+                logger.info("✅ Form submitted")
                 
-                logger.info("✅ Form filled successfully")
-                screenshot = await take_screenshot(computer.page)
-                return True, "Application submitted successfully", {"screenshot": screenshot}
+                # Wait for success message to appear (common success indicators)
+                success_selectors = [
+                    "text=application submitted",
+                    "text=thank you for applying",
+                    "text=application received",
+                    "text=successfully submitted",
+                    ".success-message",
+                    "#success-message"
+                ]
+                
+                success_found = False
+                for selector in success_selectors:
+                    try:
+                        await computer.page.wait_for_selector(selector, timeout=10000)
+                        success_found = True
+                        logger.info(f"✅ Success message found: {selector}")
+                        break
+                    except:
+                        pass
+
+                # If no explicit success message, wait a moment for any transition
+                if not success_found:
+                    await computer.page.wait_for_timeout(3000)
+                    logger.info("No explicit success message found, waited for page transition")
+
+                # Take screenshot of the success page
+                screenshot_path = await take_screenshot(computer.page)
+                logger.info(f"✅ Success page screenshot saved to {screenshot_path}")
+
+                return True, "Application submitted successfully", {"screenshot": screenshot_path}
                 
             except Exception as e:
                 error_details = traceback.format_exc()
@@ -113,13 +136,13 @@ async def process_job(job: Dict[str, Any], resume: Dict[str, Any]) -> Tuple[bool
         logger.error(f"Browser session error: {str(e)}\n{error_details}")
         return False, f"Browser session error: {str(e)}", {"error_details": error_details}
 
-async def take_screenshot(page, label="job"):
-    """Take a screenshot and return as base64 string."""
+async def take_screenshot(page) -> str:
+    """Take a screenshot and return the path."""
     try:
-        import os  # Make sure this import is at the top of the file
-        screenshot_path = f"screenshots/{label}_{int(time.time())}.png"
+        timestamp = int(time.time())
+        screenshot_path = f"screenshots/job_{timestamp}.png"
         os.makedirs(os.path.dirname(screenshot_path), exist_ok=True)
-        await page.screenshot(path=screenshot_path)
+        await page.screenshot(path=screenshot_path, full_page=True)
         return screenshot_path
     except Exception as e:
         logger.error(f"Failed to take screenshot: {str(e)}")

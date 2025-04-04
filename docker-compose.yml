@@ -9,6 +9,8 @@ services:
       - "3000:3000"
     volumes:
       - ./queue_system:/app/queue_system
+      - ./agent/screenshots:/app/screenshots  
+
     environment:
       - NODE_ENV=production
     restart: always
