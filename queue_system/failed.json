@@ -176,5 +176,51 @@
     "error": "DOMException: Failed to execute 'querySelectorAll' on 'Document': '#864-label' is not a valid selector.\n    at query (<anonymous>:3179:41)\n    at <anonymous>:3189:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3176:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:3053:19)\n    at <anonymous>:3011:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:3006:19)\n    at Object.query (<anonymous>:3211:44)\n    at <anonymous>:3169:21",
     "notes": null,
     "last_error": "DOMException: Failed to execute 'querySelectorAll' on 'Document': '#864-label' is not a valid selector.\n    at query (<anonymous>:3179:41)\n    at <anonymous>:3189:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3176:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:3053:19)\n    at <anonymous>:3011:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:3006:19)\n    at Object.query (<anonymous>:3211:44)\n    at <anonymous>:3169:21"
+  },
+  {
+    "id": "4541078005",
+    "job_data": {
+      "id": "4541078005",
+      "title": "Forward-Deployed AI Engineer",
+      "company": "OfferFit",
+      "company_token": "offerfit",
+      "location": "United States (Remote)",
+      "department": "Customer ",
+      "posted_at": "2025-04-02T10:49:33-04:00",
+      "job_url": "https://job-boards.greenhouse.io/offerfit/jobs/4541078005",
+      "apply_url": "https://boards.greenhouse.io/offerfit/jobs/4541078005",
+      "content_snippet": "OfferFit was founded by ex-McKinsey and BCG math PhDs, and we\u2019re funded by leading Silicon Valley VCs. OfferFit\u2019s AI decisioning engine supports 1:1 personalization for lifecycle marketing campaigns, powered by reinforcement learning AI. This allows marketers to test & improve the performance of their campaigns much faster than before. Customers include leading brands like Brinks Home, Yelp, Chime, Engie, and MetLife, among many others. Note for Applicants: Data shows that men on average apply f...",
+      "content_full": "",
+      "salary_min": null,
+      "salary_max": null,
+      "experience_years": null,
+      "experience_required": false,
+      "is_remote": true,
+      "is_us_based": true,
+      "tech_stack": [
+        "airflow",
+        "ci/cd",
+        "express",
+        "fastapi",
+        "gcp",
+        "javascript",
+        "kubernetes",
+        "node",
+        "pandas",
+        "python",
+        "sql",
+        "terraform",
+        "vue"
+      ],
+      "role_category": "ml_ai",
+      "job_hash": "a20e7e84fd342a3b17cd9544b9951682"
+    },
+    "status": "failed",
+    "added_at": "2025-04-04T12:06:55.404Z",
+    "updated_at": "2025-04-04T12:07:51.%fZ",
+    "attempts": 3,
+    "error": "DOMException: Failed to execute 'querySelectorAll' on 'Document': '#4003858005-label' is not a valid selector.\n    at query (<anonymous>:3179:41)\n    at <anonymous>:3189:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3176:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:3053:19)\n    at <anonymous>:3011:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:3006:19)\n    at Object.query (<anonymous>:3211:44)\n    at <anonymous>:3169:21",
+    "notes": null,
+    "last_error": "DOMException: Failed to execute 'querySelectorAll' on 'Document': '#4003858005-label' is not a valid selector.\n    at query (<anonymous>:3179:41)\n    at <anonymous>:3189:7\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3176:17)\n    at SelectorEvaluatorImpl._querySimple (<anonymous>:3053:19)\n    at <anonymous>:3011:29\n    at SelectorEvaluatorImpl._cached (<anonymous>:2977:20)\n    at SelectorEvaluatorImpl.query (<anonymous>:3006:19)\n    at Object.query (<anonymous>:3211:44)\n    at <anonymous>:3169:21"
   }
 ]

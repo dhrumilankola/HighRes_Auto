@@ -65,28 +65,42 @@ const writeQueue = (filePath, data) => {
 
 // Add a job to the queue
 const addToQueue = (job) => {
-  const queued = readQueue(QUEUED_PATH);
-  const jobEntry = {
-    id: job.id,
-    job_data: job,
-    status: 'queued',
-    added_at: new Date().toISOString(),
-    updated_at: new Date().toISOString(),
-    attempts: 0,
-    error: null,
-    notes: null
-  };
-  
-  // Check if job already exists in any queue
-  if (isJobInAnyQueue(job.id)) {
-    return { success: false, message: 'Job already exists in queue' };
+  try {
+    console.log('Adding job to queue:', job.id);
+    
+    const queued = readQueue(QUEUED_PATH);
+    console.log('Current queue length:', queued.length);
+    
+    const jobEntry = {
+      id: job.id,
+      job_data: job,
+      status: 'queued',
+      added_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      attempts: 0,
+      error: null,
+      notes: null
+    };
+    
+    // Check if job already exists in any queue
+    if (isJobInAnyQueue(job.id)) {
+      console.log('Job already exists in queue:', job.id);
+      return { success: false, message: 'Job already exists in queue' };
+    }
+    
+    queued.push(jobEntry);
+    const writeResult = writeQueue(QUEUED_PATH, queued);
+    console.log('Write result:', writeResult);
+    
+    if (writeResult) {
+      console.log('Successfully added job to queue:', job.id);
+      return { success: true, job: jobEntry };
+    }
+    return { success: false, message: 'Failed to write to queue' };
+  } catch (error) {
+    console.error('Error in addToQueue:', error);
+    return { success: false, message: 'Error adding to queue: ' + error.message };
   }
-  
-  queued.push(jobEntry);
-  if (writeQueue(QUEUED_PATH, queued)) {
-    return { success: true, job: jobEntry };
-  }
-  return { success: false, message: 'Failed to write to queue' };
 };
 
 // Check if a job exists in any queue
@@ -127,44 +141,63 @@ const moveJob = (jobId, fromPath, toPath, updates = {}) => {
   return { success: false, message: 'Failed to update queues' };
 };
 
+// Remove a job from any queue
+const removeJob = (jobId) => {
+  const queueFiles = [QUEUED_PATH, IN_PROGRESS_PATH, APPLIED_PATH, FAILED_PATH, MANUAL_REVIEW_PATH];
+  let found = false;
+  for (const filePath of queueFiles) {
+    const queue = readQueue(filePath);
+    const updatedQueue = queue.filter(job => job.id !== jobId);
+    if (updatedQueue.length !== queue.length) {
+      // Job was found and removed in this queue.
+      writeQueue(filePath, updatedQueue);
+      found = true;
+      break;
+    }
+  }
+  if (!found) {
+    return { success: false, message: 'Job not found in any queue' };
+  }
+  return { success: true, message: 'Job removed from queue' };
+};
+
 // Get all jobs with a specific status
 const getJobsByStatus = (status) => {
-    let result;
-    switch (status) {
-      case 'queued':
-        result = readQueue(QUEUED_PATH);
-        break;
-      case 'in_progress':
-        result = readQueue(IN_PROGRESS_PATH);
-        break;
-      case 'applied':
-        result = readQueue(APPLIED_PATH);
-        break;
-      case 'failed':
-        result = readQueue(FAILED_PATH);
-        break;
-      case 'manual_review':
-        result = readQueue(MANUAL_REVIEW_PATH);
-        break;
-      case 'all':
-        result = {
-          queued: readQueue(QUEUED_PATH),
-          in_progress: readQueue(IN_PROGRESS_PATH),
-          applied: readQueue(APPLIED_PATH),
-          failed: readQueue(FAILED_PATH),
-          manual_review: readQueue(MANUAL_REVIEW_PATH)
-        };
-        break;
-      default:
-        result = [];
-    }
-    // Ensure that when not 'all', we return an array.
-    if (status !== 'all' && !Array.isArray(result)) {
-      console.error(`Expected an array for status "${status}" but got:`, result);
+  let result;
+  switch (status) {
+    case 'queued':
+      result = readQueue(QUEUED_PATH);
+      break;
+    case 'in_progress':
+      result = readQueue(IN_PROGRESS_PATH);
+      break;
+    case 'applied':
+      result = readQueue(APPLIED_PATH);
+      break;
+    case 'failed':
+      result = readQueue(FAILED_PATH);
+      break;
+    case 'manual_review':
+      result = readQueue(MANUAL_REVIEW_PATH);
+      break;
+    case 'all':
+      result = {
+        queued: readQueue(QUEUED_PATH),
+        in_progress: readQueue(IN_PROGRESS_PATH),
+        applied: readQueue(APPLIED_PATH),
+        failed: readQueue(FAILED_PATH),
+        manual_review: readQueue(MANUAL_REVIEW_PATH)
+      };
+      break;
+    default:
       result = [];
-    }
-    return result;
-  };
+  }
+  if (status !== 'all' && !Array.isArray(result)) {
+    console.error(`Expected an array for status "${status}" but got:`, result);
+    result = [];
+  }
+  return result;
+};
 
 // Update a job's status
 const updateJobStatus = (jobId, newStatus, details = {}) => {
@@ -240,5 +273,6 @@ module.exports = {
   getJobsByStatus,
   updateJobStatus,
   getQueueStats,
-  isJobInAnyQueue
+  isJobInAnyQueue,
+  removeJob  
 };

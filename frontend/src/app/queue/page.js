@@ -1,3 +1,5 @@
+// src/app/queue/page.js
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -56,21 +58,28 @@ export default function QueuePage() {
     }
   };
 
-  const requeueJob = async (jobId) => {
+  const markAsAppliedManually = async (jobId) => {
     try {
-      const response = await fetch(`/api/queue/jobs/${jobId}/requeue`, {
-        method: 'POST'
+      const response = await fetch(`/api/queue/jobs/${jobId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          status: 'applied',
+          details: {
+            notes: 'Applied manually by user',
+          },
+        }),
       });
       
       if (response.ok) {
-        // Refresh the job list
-        fetchJobs();
+        fetchJobs(); // Refresh the job list
       } else {
-        const data = await response.json();
-        console.error('Error requeuing job:', data.message);
+        console.error('Failed to mark job as applied');
       }
     } catch (error) {
-      console.error('Error requeuing job:', error);
+      console.error('Error marking job as applied:', error);
     }
   };
 
@@ -85,12 +94,11 @@ export default function QueuePage() {
         </div>
       );
     }
-  
+
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {safeJobList.map((job) => (
           <div key={job.id} className="card p-4">
-            {/* Job card content remains the same */}
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-lg font-semibold text-gray-900 truncate">
                 {job.job_data.title}
@@ -111,16 +119,26 @@ export default function QueuePage() {
                 Attempts: {job.attempts}
               </div>
             )}
-            {job.error && (
-              <div className="text-xs text-red-500 mt-2 border-t pt-2">
-                Error: {job.error}
-              </div>
-            )}
+            
             {job.notes && (
               <div className="text-xs text-blue-500 mt-2 border-t pt-2">
                 Notes: {job.notes}
               </div>
             )}
+
+            {/* Applied Manually button - only for jobs needing review */}
+            {job.status === 'manual_review' && (
+              <div className="mt-2 pt-2 border-t">
+                <button
+                  onClick={() => markAsAppliedManually(job.id)}
+                  className="text-xs bg-green-100 hover:bg-green-200 text-green-800 px-2 py-1 rounded flex items-center"
+                >
+                  <FaCheck className="mr-1" /> Applied Manually
+                </button>
+              </div>
+            )}
+
+            {/* See Proof link for applied jobs */}
             {job.status === 'applied' && job.screenshot && (
               <div className="mt-2 pt-2 border-t">
                 <a 
@@ -133,12 +151,17 @@ export default function QueuePage() {
                 </a>
               </div>
             )}
-            {job.status === 'manual_review' && (
-              <button 
-                className="text-xs bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
-                onClick={() => requeueJob(job.id)}>
-                Requeue
-              </button>
+
+            {/* Contact Support button for failed jobs */}
+            {job.error && job.status === 'failed' && (
+              <div className="text-xs mt-2 border-t pt-2">
+                <button 
+                  className="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded flex items-center text-xs"
+                  onClick={() => alert('Support functionality would be implemented here')}
+                >
+                  <FaExclamationTriangle className="mr-1" /> Contact Support
+                </button>
+              </div>
             )}
           </div>
         ))}
