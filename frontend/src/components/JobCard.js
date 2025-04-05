@@ -19,18 +19,19 @@ const JobCard = ({ job, onSelect, isSelected }) => {
         </div>
         
         <div className="flex items-center text-sm text-gray-500 mb-2">
-          <FaBuilding className="mr-1" />
-          <span className="mr-3">{job.company}</span>
-          {job.location && (
-            <>
-              <FaMapMarkerAlt className="mr-1" />
-              <span>{job.location}</span>
-            </>
-          )}
+            <FaBuilding className="mr-1" />
+            <span className="mr-3">{job.company}</span>
+            {job.location && (
+                <>
+                <FaMapMarkerAlt className="mr-1" />
+                <span className="line-clamp-1 truncate">{job.location}</span>
+                </>
+            )}
         </div>
+
         
-        <p className="text-sm text-gray-600 line-clamp-3 mb-3">
-          {job.content_snippet || 'No description available'}
+        <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+             {job.content_snippet || 'No description available'}
         </p>
         
         <div className="flex flex-wrap gap-2 mb-3">
@@ -51,16 +52,26 @@ const JobCard = ({ job, onSelect, isSelected }) => {
             {timeAgo}
           </div>
           
-          <button
-            onClick={() => onSelect(job)}
-            className={`${
-              isSelected 
-                ? 'bg-red-600 hover:bg-red-700 focus:ring-red-200' 
-                : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-200'
-            } px-3 py-1.5 text-xs text-white rounded-md focus:outline-none focus:ring-2 transition-colors`}
-          >
-            {isSelected ? 'Remove' : 'Apply'}
-          </button>
+          <div className="flex gap-2">
+            <a
+              href={job.job_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-600 hover:bg-gray-700 focus:ring-gray-200 px-3 py-1.5 text-xs text-white rounded-md focus:outline-none focus:ring-2 transition-colors"
+            >
+              View
+            </a>
+            <button
+              onClick={() => onSelect(job)}
+              className={`${
+                isSelected 
+                  ? 'bg-red-600 hover:bg-red-700 focus:ring-red-200' 
+                  : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-200'
+              } px-3 py-1.5 text-xs text-white rounded-md focus:outline-none focus:ring-2 transition-colors`}
+            >
+              {isSelected ? 'Remove' : 'Select to Apply'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
