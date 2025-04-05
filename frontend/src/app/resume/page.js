@@ -1,8 +1,17 @@
+// src/app/resume/page.js
 'use client';
 
 import React, { useState } from 'react';
-import { FaFileUpload, FaUser, FaGraduationCap, FaBriefcase, FaCode, FaCogs, FaMedal, FaCheck } from 'react-icons/fa';
-
+import {
+  FaFileUpload,
+  FaUser,
+  FaGraduationCap,
+  FaBriefcase,
+  FaCode,
+  FaCogs,
+  FaMedal,
+  FaCheck,
+} from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FileUpload from '../../components/resume/FileUpload';
@@ -24,46 +33,29 @@ const steps = [
   { id: 'skills', title: 'Skills', icon: <FaCogs /> },
   { id: 'honors', title: 'Honors', icon: <FaMedal /> },
   { id: 'predefined', title: 'Predefined Answers', icon: <FaCheck /> },
-  { id: 'review', title: 'Review', icon: <FaCheck /> }
+  { id: 'review', title: 'Review', icon: <FaCheck /> },
 ];
 
 export default function ResumePage() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [resumeData, setResumeData] = useState(null);
-  const [isUploading, setIsUploading] = useState(false);
   const [parsedResume, setParsedResume] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleResumeUpload = async (file) => {
     setIsUploading(true);
-    
     try {
-      // Create FormData for file upload
-      const formData = new FormData();
-      formData.append('resume', file);
-      
-      // In a real app, you would send this to your API endpoint
-      // For now, we'll simulate a successful response
-      
-      // This would be the API call
-      /*
-      const response = await fetch('/api/parse-resume', {
-        method: 'POST',
-        body: formData,
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to parse resume');
-      }
-      
-      const data = await response.json();
-      */
-      
-      // Simulate API response delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For demo purposes, use a template structure
-      // In production, this would come from your backend parser
-      const parsedData = {
+      // Import the processResume function from our client utility
+      const { processResume } = await import('../../utils/GeminiAPI');
+      // Process the resume by sending it to our API endpoint
+      const parsedData = await processResume(file);
+      console.log('Parsed resume data:', parsedData);
+      setParsedResume(parsedData);
+      setCurrentStep(1); // Move to the next step
+    } catch (parsingError) {
+      console.error('Error parsing resume:', parsingError);
+      alert('We had trouble parsing your resume automatically. Please review and fill in the information manually.');
+      // Fallback to an empty template if parsing fails
+      const emptyTemplate = {
         personal_info: {
           first_name: "",
           last_name: "",
@@ -74,21 +66,10 @@ export default function ResumePage() {
         },
         summary: "",
         education: [
-          {
-            degree: "",
-            university: "",
-            dates: "",
-            gpa: "",
-            location: ""
-          }
+          { degree: "", university: "", dates: "", gpa: "", location: "" }
         ],
         experience: [
-          {
-            title: "",
-            company: "",
-            dates: "",
-            bullets: [""]
-          }
+          { title: "", company: "", dates: "", bullets: [""] }
         ],
         skills: {
           languages: [],
@@ -98,12 +79,7 @@ export default function ResumePage() {
           tools: []
         },
         projects: [
-          {
-            name: "",
-            technologies: [],
-            description: "",
-            link: ""
-          }
+          { name: "", technologies: [], description: "", link: "" }
         ],
         honors: [],
         predefined_answers: {
@@ -118,12 +94,8 @@ export default function ResumePage() {
           "Are you a veteran?": "No"
         }
       };
-      
-      setParsedResume(parsedData);
-      setCurrentStep(1); // Move to the next step
-    } catch (error) {
-      console.error('Error parsing resume:', error);
-      alert('Failed to parse resume. Please try again.');
+      setParsedResume(emptyTemplate);
+      setCurrentStep(1);
     } finally {
       setIsUploading(false);
     }
@@ -132,14 +104,13 @@ export default function ResumePage() {
   const updateResumeData = (section, data) => {
     setParsedResume(prevData => ({
       ...prevData,
-      [section]: data
+      [section]: data,
     }));
   };
 
   const handleNext = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
-      // Scroll to top when changing steps
       window.scrollTo(0, 0);
     }
   };
@@ -147,40 +118,33 @@ export default function ResumePage() {
   const handlePrevious = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
-      // Scroll to top when changing steps
       window.scrollTo(0, 0);
     }
   };
 
   const handleSaveResume = async () => {
     try {
-      // In a real app, you would send this to your API endpoint
-      // For now, we'll simulate a successful save
-      
-      // This would be the API call
-      /*
+      setIsUploading(true);
+      // Save resume data to the API endpoint for saving and to localStorage
       const response = await fetch('/api/save-resume', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(parsedResume),
       });
-      
       if (!response.ok) {
-        throw new Error('Failed to save resume');
+        throw new Error('Failed to save resume to server');
       }
-      */
-      
-      // Save to localStorage for demo purposes
-      localStorage.setItem('userResume', JSON.stringify(parsedResume));
-      
+      const data = await response.json();
+      localStorage.setItem('userResumeForJobApplications', JSON.stringify(parsedResume));
       alert('Resume saved successfully!');
-      // Redirect to the home page or another appropriate page
       window.location.href = '/';
-    } catch (error) {
-      console.error('Error saving resume:', error);
-      alert('Failed to save resume. Please try again.');
+    } catch (apiError) {
+      console.error('API call failed:', apiError);
+      localStorage.setItem('userResumeForJobApplications', JSON.stringify(parsedResume));
+      alert('Resume saved locally. You can now apply for jobs!');
+      window.location.href = '/';
+    } finally {
+      setIsUploading(false);
     }
   };
 
@@ -189,10 +153,16 @@ export default function ResumePage() {
       case 'upload':
         return <FileUpload onUpload={handleResumeUpload} isLoading={isUploading} />;
       case 'personal':
-        return <PersonalInfoForm data={parsedResume.personal_info} summary={parsedResume.summary} onSave={(data, summary) => {
-          updateResumeData('personal_info', data);
-          updateResumeData('summary', summary);
-        }} />;
+        return (
+          <PersonalInfoForm
+            data={parsedResume.personal_info}
+            summary={parsedResume.summary}
+            onSave={(data, summary) => {
+              updateResumeData('personal_info', data);
+              updateResumeData('summary', summary);
+            }}
+          />
+        );
       case 'education':
         return <EducationForm data={parsedResume.education} onSave={(data) => updateResumeData('education', data)} />;
       case 'experience':
@@ -215,19 +185,15 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
-      
       <main className="flex-grow">
         <div className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                My Resume
-              </h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">My Resume</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Upload your resume and review the parsed information to ensure your job applications have the correct details.
               </p>
             </div>
-
             {/* Progress Steps */}
             <div className="mb-8">
               <div className="hidden sm:block">
@@ -255,7 +221,6 @@ export default function ResumePage() {
                   </nav>
                 </div>
               </div>
-              
               {/* Mobile Step Indicator */}
               <div className="sm:hidden">
                 <p className="text-sm font-medium text-gray-500">
@@ -263,14 +228,10 @@ export default function ResumePage() {
                 </p>
               </div>
             </div>
-            
             {/* Step Content */}
             <div className="bg-white shadow sm:rounded-lg">
-              <div className="px-4 py-5 sm:p-6">
-                {renderStepContent()}
-              </div>
+              <div className="px-4 py-5 sm:p-6">{renderStepContent()}</div>
             </div>
-            
             {/* Navigation Buttons */}
             {currentStep > 0 && (
               <div className="mt-6 flex justify-between">
@@ -295,7 +256,6 @@ export default function ResumePage() {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );

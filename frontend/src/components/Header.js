@@ -70,9 +70,12 @@ const Header = () => {
                 )}
               </Link>
               <Link href="/resume" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                pathname === '/resume' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              }`}>
-                <FaFileAlt className="mr-1" />
+                  pathname === '/resume'
+                    ? 'border-[#4E82EE] text-white'
+                    : 'border-transparent text-gray-300 hover:text-[#9773CD] hover:border-[#9773CD]'
+                }`}
+              >
+                <FaClipboardList className="mr-1" />
                 My Resume
               </Link>
             </nav>

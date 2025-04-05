@@ -1,7 +1,9 @@
+// src/components/resume/FileUpload.js
 'use client';
 
 import React, { useState, useRef } from 'react';
 import { FaFileUpload, FaSpinner } from 'react-icons/fa';
+import LoadingIndicator from './LoadingIndicator';
 
 const FileUpload = ({ onUpload, isLoading }) => {
   const [dragActive, setDragActive] = useState(false);
@@ -11,7 +13,6 @@ const FileUpload = ({ onUpload, isLoading }) => {
   const handleDrag = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    
     if (e.type === 'dragenter' || e.type === 'dragover') {
       setDragActive(true);
     } else if (e.type === 'dragleave') {
@@ -23,7 +24,6 @@ const FileUpload = ({ onUpload, isLoading }) => {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
       handleFile(file);
@@ -32,7 +32,6 @@ const FileUpload = ({ onUpload, isLoading }) => {
 
   const handleChange = (e) => {
     e.preventDefault();
-    
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       handleFile(file);
@@ -40,31 +39,35 @@ const FileUpload = ({ onUpload, isLoading }) => {
   };
 
   const handleFile = (file) => {
-    // Check file type
-    const validTypes = ['application/pdf', 'text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    
+    const validTypes = [
+      'application/pdf',
+      'text/plain',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    ];
     if (!validTypes.includes(file.type)) {
       alert('Please upload a valid resume file (PDF, DOC, DOCX, or TXT)');
       return;
     }
-    
     setSelectedFile(file);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     if (!selectedFile) {
       alert('Please select a file to upload');
       return;
     }
-    
     onUpload(selectedFile);
   };
 
   const openFileSelector = () => {
     fileInputRef.current.click();
   };
+
+  if (isLoading) {
+    return <LoadingIndicator message="Parsing your resume with AI..." />;
+  }
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -74,9 +77,8 @@ const FileUpload = ({ onUpload, isLoading }) => {
           Upload your resume to get started. We accept PDF, DOC, DOCX, and TXT files.
         </p>
       </div>
-      
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div 
+        <div
           className={`mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-md ${
             dragActive ? 'border-blue-400 bg-blue-50' : 'border-gray-300'
           }`}
@@ -105,19 +107,15 @@ const FileUpload = ({ onUpload, isLoading }) => {
               </label>
               <p className="pl-1">or drag and drop</p>
             </div>
-            <p className="text-xs text-gray-500">
-              PDF, DOC, DOCX, or TXT up to 10MB
-            </p>
+            <p className="text-xs text-gray-500">PDF, DOC, DOCX, or TXT up to 10MB</p>
           </div>
         </div>
-        
         {selectedFile && (
           <div className="bg-gray-50 p-4 rounded-md">
             <p className="text-sm font-medium text-gray-900">Selected file:</p>
             <p className="text-sm text-gray-600">{selectedFile.name}</p>
           </div>
         )}
-        
         <div className="flex justify-center">
           <button
             type="submit"
@@ -130,7 +128,7 @@ const FileUpload = ({ onUpload, isLoading }) => {
                 Parsing Resume...
               </>
             ) : (
-              'Parse Resume'
+              'Parse Resume with AI'
             )}
           </button>
         </div>
