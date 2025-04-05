@@ -15309,3 +15309,605 @@
 2025-04-02 03:06:26,680 - INFO - Successfully saved 37 jobs to tech_jobs.json
 2025-04-02 03:06:26,689 - INFO - Successfully saved 37 jobs to tech_jobs.csv
 2025-04-02 03:06:26,833 - INFO - Successfully saved 37 jobs to tech_jobs.xlsx
+2025-04-03 03:53:22,162 - INFO - Loaded 100 companies from E:\Projects\Graduate\Auto Apply\job_scraper\output\greenhouse_companies_batch_000.csv
+2025-04-03 03:53:23,407 - INFO - Found 5 jobs for Alt (token: alt)
+2025-04-03 03:53:23,409 - INFO - Progress: 1/100 companies processed
+2025-04-03 03:53:23,417 - INFO - Found 21 jobs for Alma (token: alma)
+2025-04-03 03:53:23,445 - INFO - Found 25 jobs for Altos Labs (token: altoslabs)
+2025-04-03 03:53:23,502 - INFO - Found 147 jobs for Affirm (token: affirm)
+2025-04-03 03:53:23,507 - INFO - Found 5 jobs for  Bloomerang (token: bloomerang)
+2025-04-03 03:53:23,522 - INFO - Found 52 jobs for ALTEN Technology USA (token: altentechnologyusa)
+2025-04-03 03:53:23,533 - INFO - Found 32 jobs for Alpaca  (token: alpaca)
+2025-04-03 03:53:23,610 - INFO - Progress: 2/100 companies processed
+2025-04-03 03:53:23,639 - INFO - Found 47 jobs for 6sense (token: 6sense)
+2025-04-03 03:53:23,664 - INFO - Found 8 jobs for Branch (token: branch)
+2025-04-03 03:53:23,667 - INFO - Found 2 jobs for Arc & Codementor (token: arcdev)
+2025-04-03 03:53:23,813 - INFO - Progress: 3/100 companies processed
+2025-04-03 03:53:23,914 - INFO - Found 160 jobs for Anthropic (token: anthropic)
+2025-04-03 03:53:23,924 - INFO - Found 18 jobs for Calendly (token: calendly)
+2025-04-03 03:53:23,930 - INFO - Found 40 jobs for Cohere Health (token: coherehealth)
+2025-04-03 03:53:23,989 - INFO - Found 36 jobs for ClickHouse (token: clickhouse)
+2025-04-03 03:53:24,015 - INFO - Progress: 4/100 companies processed
+2025-04-03 03:53:24,028 - INFO - Found 25 jobs for Career TEAM (token: careerteam)
+2025-04-03 03:53:24,121 - INFO - Found 5 jobs for Dagster Labs (token: dagsterlabs)
+2025-04-03 03:53:24,174 - INFO - Found 68 jobs for Collectors (token: collectorsuniverse)
+2025-04-03 03:53:24,186 - INFO - Found 2 jobs for Community Change (token: communitychange)
+2025-04-03 03:53:24,217 - INFO - Progress: 5/100 companies processed
+2025-04-03 03:53:24,335 - INFO - Found 66 jobs for Cresco Labs (token: crescolabs)
+2025-04-03 03:53:24,362 - INFO - Found 74 jobs for Dataiku (token: dataiku)
+2025-04-03 03:53:24,419 - INFO - Progress: 6/100 companies processed
+2025-04-03 03:53:24,478 - INFO - Found 12 jobs for Customer.io (token: customerio)
+2025-04-03 03:53:24,621 - INFO - Progress: 7/100 companies processed
+2025-04-03 03:53:24,672 - INFO - Found 19 jobs for DistantJob (token: distantjob)
+2025-04-03 03:53:24,678 - INFO - Found 29 jobs for Element Biosciences (token: elementbiosciences)
+2025-04-03 03:53:24,706 - INFO - Found 2 jobs for Entry Level Roles (token: entrylevelrolesinternalonly)
+2025-04-03 03:53:24,784 - INFO - Found 34 jobs for Fetch (token: fetchrewards)
+2025-04-03 03:53:24,822 - INFO - Progress: 8/100 companies processed
+2025-04-03 03:53:24,924 - INFO - Found 124 jobs for Figma (token: figma)
+2025-04-03 03:53:25,005 - INFO - Found 9 jobs for Forethought (token: forethought)
+2025-04-03 03:53:25,025 - INFO - Progress: 9/100 companies processed
+2025-04-03 03:53:25,119 - INFO - Found 36 jobs for G2 (token: g2crowd)
+2025-04-03 03:53:25,236 - INFO - Found 52 jobs for Flex (token: flex)
+2025-04-03 03:53:25,236 - INFO - Progress: 10/100 companies processed
+2025-04-03 03:53:25,287 - INFO - Found 30 jobs for GOAT Group (token: goatgroup)
+2025-04-03 03:53:25,363 - INFO - Found 32 jobs for GHX (token: globalhealthcareexchangeinc)
+2025-04-03 03:53:25,395 - INFO - Found 2 jobs for General Assembly Remote Jobs  (token: remote)
+2025-04-03 03:53:25,439 - INFO - Progress: 11/100 companies processed
+2025-04-03 03:53:25,538 - INFO - Found 115 jobs for Glean (token: gleanwork)
+2025-04-03 03:53:25,560 - INFO - Found 64 jobs for DeepMind (token: deepmind)
+2025-04-03 03:53:25,633 - INFO - Found 16 jobs for Genies, Inc.  (token: genies)
+2025-04-03 03:53:25,641 - INFO - Progress: 12/100 companies processed
+2025-04-03 03:53:25,757 - INFO - Found 655 jobs for Capco (token: capco)
+2025-04-03 03:53:25,773 - INFO - Found 108 jobs for Grafana Labs (token: grafanalabs)
+2025-04-03 03:53:25,844 - INFO - Progress: 13/100 companies processed
+2025-04-03 03:53:25,863 - INFO - Found 3 jobs for Greenplaces (token: greenplaces)
+2025-04-03 03:53:25,920 - INFO - Found 37 jobs for Grammarly (token: grammarly)
+2025-04-03 03:53:25,943 - INFO - Found 15 jobs for Grow Therapy (token: growtherapy)
+2025-04-03 03:53:26,016 - INFO - Found 107 jobs for Internal Job Board (token: internaljobsatlush)
+2025-04-03 03:53:26,045 - INFO - Progress: 14/100 companies processed
+2025-04-03 03:53:26,109 - INFO - Found 382 jobs for Hibu (token: hibu)
+2025-04-03 03:53:26,116 - INFO - Found 7 jobs for Invisible Technologies (token: invisibletech)
+2025-04-03 03:53:26,187 - INFO - Found 12 jobs for MatX (token: matx)
+2025-04-03 03:53:26,244 - INFO - Found 2 jobs for Internship and Full-Time (token: internshipsandftjobboard)
+2025-04-03 03:53:26,246 - INFO - Progress: 15/100 companies processed
+2025-04-03 03:53:26,318 - INFO - Found 44 jobs for Job Board (token: corelight)
+2025-04-03 03:53:26,398 - INFO - Found 57 jobs for Moloco (token: moloco)
+2025-04-03 03:53:26,448 - INFO - Progress: 16/100 companies processed
+2025-04-03 03:53:26,551 - INFO - Found 29 jobs for Nurix (token: nurix)
+2025-04-03 03:53:26,570 - INFO - Found 71 jobs for Neuralink (token: neuralink)
+2025-04-03 03:53:26,607 - INFO - Found 16 jobs for OfferFit (token: offerfit)
+2025-04-03 03:53:26,625 - INFO - Found 26 jobs for Mozilla (token: mozilla)
+2025-04-03 03:53:26,638 - INFO - Found 36 jobs for NewsBreak (token: newsbreak)
+2025-04-03 03:53:26,650 - INFO - Progress: 17/100 companies processed
+2025-04-03 03:53:26,675 - INFO - Found 140 jobs for Motive (token: gomotive)
+2025-04-03 03:53:26,703 - INFO - Found 21 jobs for Newsela (token: newsela)
+2025-04-03 03:53:26,809 - INFO - Found 81 jobs for Oportun (token: oportun)
+2025-04-03 03:53:26,851 - INFO - Progress: 18/100 companies processed
+2025-04-03 03:53:26,979 - INFO - Found 517 jobs for DoorDash USA (token: doordashusa)
+2025-04-03 03:53:27,048 - INFO - Found 12 jobs for PBS Engineering & Environmental (token: pbs)
+2025-04-03 03:53:27,050 - INFO - Found 10 jobs for Pattern Data (token: patterndata)
+2025-04-03 03:53:27,052 - INFO - Progress: 19/100 companies processed
+2025-04-03 03:53:27,118 - INFO - Found 50 jobs for Pair Team (token: pairteam)
+2025-04-03 03:53:27,133 - INFO - Found 9 jobs for Paradigm Health (token: paradigminccareersopenpositions)
+2025-04-03 03:53:27,148 - INFO - Found 42 jobs for PMG (token: pmg)
+2025-04-03 03:53:27,201 - INFO - Found 11 jobs for Platform Science (token: platformscience)
+2025-04-03 03:53:27,254 - INFO - Progress: 20/100 companies processed
+2025-04-03 03:53:27,341 - INFO - Found 82 jobs for Postman (token: postman)
+2025-04-03 03:53:27,380 - INFO - Found 58 jobs for Perplexity AI (token: perplexityai)
+2025-04-03 03:53:27,409 - INFO - Found 7 jobs for Prodigal (token: prodigal)
+2025-04-03 03:53:27,456 - INFO - Progress: 21/100 companies processed
+2025-04-03 03:53:27,486 - INFO - Found 6 jobs for ProPublica (token: propublica)
+2025-04-03 03:53:27,630 - INFO - Found 5 jobs for Remotasks (token: remotasks)
+2025-04-03 03:53:27,657 - INFO - Progress: 22/100 companies processed
+2025-04-03 03:53:27,858 - INFO - Progress: 23/100 companies processed
+2025-04-03 03:53:27,882 - INFO - Found 1 jobs for Remote Positions (token: opremote)
+2025-04-03 03:53:27,900 - INFO - Found 233 jobs for Pure Storage (token: purestorage)
+2025-04-03 03:53:27,975 - INFO - Found 99 jobs for Quince (token: quince)
+2025-04-03 03:53:28,059 - INFO - Progress: 24/100 companies processed
+2025-04-03 03:53:28,090 - INFO - Found 92 jobs for Remote - Referral Board (token: remotereferralboardinternaluseonly)
+2025-04-03 03:53:28,127 - INFO - Found 193 jobs for Remote (token: remotecom)
+2025-04-03 03:53:28,146 - INFO - Found 129 jobs for Reddit (token: reddit)
+2025-04-03 03:53:28,192 - INFO - Found 39 jobs for Roofr (token: roofr)
+2025-04-03 03:53:28,260 - INFO - Progress: 25/100 companies processed
+2025-04-03 03:53:28,305 - INFO - Found 59 jobs for SPS-North America (token: spsnorthamerica)
+2025-04-03 03:53:28,311 - INFO - Found 26 jobs for SmarterDx (token: smarterdx)
+2025-04-03 03:53:28,359 - INFO - Found 542 jobs for Outlier (token: outlier)
+2025-04-03 03:53:28,417 - INFO - Found 15 jobs for Runway  (token: runwayml)
+2025-04-03 03:53:28,419 - INFO - Found 13 jobs for Sand Tech Holdings Limited (token: sandtech)
+2025-04-03 03:53:28,442 - INFO - Found 100 jobs for Smartsheet (token: smartsheet)
+2025-04-03 03:53:28,462 - INFO - Progress: 26/100 companies processed
+2025-04-03 03:53:28,494 - INFO - Found 77 jobs for Spin Careers (token: digitalfemsa)
+2025-04-03 03:53:28,502 - INFO - Found 56 jobs for Snorkel AI (token: snorkelai)
+2025-04-03 03:53:28,572 - INFO - Found 55 jobs for Strive Health (token: strivehealth)
+2025-04-03 03:53:28,660 - INFO - Found 64 jobs for Tenable, Inc. (token: tenableinc)
+2025-04-03 03:53:28,663 - INFO - Progress: 27/100 companies processed
+2025-04-03 03:53:28,710 - INFO - Found 38 jobs for Trace3 (token: trace3)
+2025-04-03 03:53:28,761 - INFO - Found 26 jobs for Tech Holding (token: techholding)
+2025-04-03 03:53:28,787 - INFO - Found 34 jobs for Tatari (token: tatari)
+2025-04-03 03:53:28,800 - INFO - Found 5 jobs for UpKeep (token: upkeep)
+2025-04-03 03:53:28,811 - INFO - Found 40 jobs for Underdog Sports (token: underdogfantasy)
+2025-04-03 03:53:28,864 - INFO - Progress: 28/100 companies processed
+2025-04-03 03:53:28,944 - INFO - Found 34 jobs for Twitch (token: twitch)
+2025-04-03 03:53:29,065 - INFO - Progress: 29/100 companies processed
+2025-04-03 03:53:29,096 - INFO - Found 23 jobs for Upwork (token: upwork)
+2025-04-03 03:53:29,266 - INFO - Progress: 30/100 companies processed
+2025-04-03 03:53:29,303 - INFO - Found 146 jobs for Tempus (token: tempus)
+2025-04-03 03:53:29,334 - INFO - Found 99 jobs for Whatnot (token: whatnot)
+2025-04-03 03:53:29,390 - INFO - Found 640 jobs for Warby Parker (token: warbyparker)
+2025-04-03 03:53:29,418 - INFO - Found 30 jobs for Webflow (token: webflow)
+2025-04-03 03:53:29,449 - INFO - Found 20 jobs for WhiteTech (token: whitetech)
+2025-04-03 03:53:29,468 - INFO - Progress: 31/100 companies processed
+2025-04-03 03:53:29,475 - INFO - Found 39 jobs for XPENG (token: xpengmotors)
+2025-04-03 03:53:29,505 - INFO - Found 211 jobs for Xometry (token: xometry)
+2025-04-03 03:53:29,669 - INFO - Progress: 32/100 companies processed
+2025-04-03 03:53:29,724 - INFO - Found 19 jobs for cBEYONData (token: cbeyondata)
+2025-04-03 03:53:29,870 - INFO - Progress: 33/100 companies processed
+2025-04-03 03:53:30,016 - INFO - Found 241 jobs for Zscaler (token: zscaler)
+2025-04-03 03:53:30,071 - INFO - Progress: 34/100 companies processed
+2025-04-03 03:53:30,272 - INFO - Progress: 35/100 companies processed
+2025-04-03 03:53:30,473 - INFO - Progress: 36/100 companies processed
+2025-04-03 03:53:30,674 - INFO - Progress: 37/100 companies processed
+2025-04-03 03:53:30,875 - INFO - Progress: 38/100 companies processed
+2025-04-03 03:53:31,076 - INFO - Progress: 39/100 companies processed
+2025-04-03 03:53:31,277 - INFO - Progress: 40/100 companies processed
+2025-04-03 03:53:31,478 - INFO - Progress: 41/100 companies processed
+2025-04-03 03:53:31,680 - INFO - Progress: 42/100 companies processed
+2025-04-03 03:53:31,880 - INFO - Progress: 43/100 companies processed
+2025-04-03 03:53:32,081 - INFO - Progress: 44/100 companies processed
+2025-04-03 03:53:32,282 - INFO - Progress: 45/100 companies processed
+2025-04-03 03:53:32,483 - INFO - Progress: 46/100 companies processed
+2025-04-03 03:53:32,686 - INFO - Progress: 47/100 companies processed
+2025-04-03 03:53:32,889 - INFO - Progress: 48/100 companies processed
+2025-04-03 03:53:33,092 - INFO - Progress: 49/100 companies processed
+2025-04-03 03:53:33,294 - INFO - Progress: 50/100 companies processed
+2025-04-03 03:53:33,496 - INFO - Progress: 51/100 companies processed
+2025-04-03 03:53:33,697 - INFO - Progress: 52/100 companies processed
+2025-04-03 03:53:33,899 - INFO - Progress: 53/100 companies processed
+2025-04-03 03:53:34,102 - INFO - Progress: 54/100 companies processed
+2025-04-03 03:53:34,304 - INFO - Progress: 55/100 companies processed
+2025-04-03 03:53:34,507 - INFO - Progress: 56/100 companies processed
+2025-04-03 03:53:34,709 - INFO - Progress: 57/100 companies processed
+2025-04-03 03:53:34,912 - INFO - Progress: 58/100 companies processed
+2025-04-03 03:53:35,114 - INFO - Progress: 59/100 companies processed
+2025-04-03 03:53:35,317 - INFO - Progress: 60/100 companies processed
+2025-04-03 03:53:35,518 - INFO - Progress: 61/100 companies processed
+2025-04-03 03:53:35,719 - INFO - Progress: 62/100 companies processed
+2025-04-03 03:53:35,920 - INFO - Progress: 63/100 companies processed
+2025-04-03 03:53:36,122 - INFO - Progress: 64/100 companies processed
+2025-04-03 03:53:36,325 - INFO - Progress: 65/100 companies processed
+2025-04-03 03:53:36,527 - INFO - Progress: 66/100 companies processed
+2025-04-03 03:53:36,730 - INFO - Progress: 67/100 companies processed
+2025-04-03 03:53:36,932 - INFO - Progress: 68/100 companies processed
+2025-04-03 03:53:37,134 - INFO - Progress: 69/100 companies processed
+2025-04-03 03:53:37,337 - INFO - Progress: 70/100 companies processed
+2025-04-03 03:53:37,539 - INFO - Progress: 71/100 companies processed
+2025-04-03 03:53:37,741 - INFO - Progress: 72/100 companies processed
+2025-04-03 03:53:37,944 - INFO - Progress: 73/100 companies processed
+2025-04-03 03:53:38,147 - INFO - Progress: 74/100 companies processed
+2025-04-03 03:53:38,348 - INFO - Progress: 75/100 companies processed
+2025-04-03 03:53:38,550 - INFO - Progress: 76/100 companies processed
+2025-04-03 03:53:38,752 - INFO - Progress: 77/100 companies processed
+2025-04-03 03:53:38,954 - INFO - Progress: 78/100 companies processed
+2025-04-03 03:53:39,155 - INFO - Progress: 79/100 companies processed
+2025-04-03 03:53:39,356 - INFO - Progress: 80/100 companies processed
+2025-04-03 03:53:39,559 - INFO - Progress: 81/100 companies processed
+2025-04-03 03:53:39,761 - INFO - Progress: 82/100 companies processed
+2025-04-03 03:53:39,963 - INFO - Progress: 83/100 companies processed
+2025-04-03 03:53:40,165 - INFO - Progress: 84/100 companies processed
+2025-04-03 03:53:40,366 - INFO - Progress: 85/100 companies processed
+2025-04-03 03:53:40,567 - INFO - Progress: 86/100 companies processed
+2025-04-03 03:53:40,768 - INFO - Progress: 87/100 companies processed
+2025-04-03 03:53:40,969 - INFO - Progress: 88/100 companies processed
+2025-04-03 03:53:41,170 - INFO - Progress: 89/100 companies processed
+2025-04-03 03:53:41,371 - INFO - Progress: 90/100 companies processed
+2025-04-03 03:53:41,572 - INFO - Progress: 91/100 companies processed
+2025-04-03 03:53:41,773 - INFO - Progress: 92/100 companies processed
+2025-04-03 03:53:41,974 - INFO - Progress: 93/100 companies processed
+2025-04-03 03:53:42,175 - INFO - Progress: 94/100 companies processed
+2025-04-03 03:53:42,376 - INFO - Progress: 95/100 companies processed
+2025-04-03 03:53:42,579 - INFO - Progress: 96/100 companies processed
+2025-04-03 03:53:42,781 - INFO - Progress: 97/100 companies processed
+2025-04-03 03:53:42,982 - INFO - Progress: 98/100 companies processed
+2025-04-03 03:53:43,184 - INFO - Progress: 99/100 companies processed
+2025-04-03 03:53:43,387 - INFO - Progress: 100/100 companies processed
+2025-04-03 03:53:43,589 - INFO - Fetched a total of 7510 jobs from 100 companies
+2025-04-03 03:53:43,707 - INFO - Processed 100/7510 jobs...
+2025-04-03 03:53:43,825 - INFO - Processed 200/7510 jobs...
+2025-04-03 03:53:45,054 - INFO - Processed 300/7510 jobs...
+2025-04-03 03:53:45,060 - INFO - Processed 400/7510 jobs...
+2025-04-03 03:53:47,714 - ERROR - Error processing job 4074964008: bad character range \s-, at position 7
+2025-04-03 03:53:48,209 - INFO - Processed 500/7510 jobs...
+2025-04-03 03:53:48,271 - INFO - Processed 600/7510 jobs...
+2025-04-03 03:53:48,312 - INFO - Processed 700/7510 jobs...
+2025-04-03 03:53:52,369 - INFO - Processed 800/7510 jobs...
+2025-04-03 03:53:52,373 - INFO - Processed 900/7510 jobs...
+2025-04-03 03:53:53,614 - INFO - Processed 1000/7510 jobs...
+2025-04-03 03:53:53,629 - INFO - Processed 1100/7510 jobs...
+2025-04-03 03:53:56,027 - INFO - Processed 1200/7510 jobs...
+2025-04-03 03:53:56,052 - INFO - Processed 1300/7510 jobs...
+2025-04-03 03:53:56,621 - INFO - Processed 1400/7510 jobs...
+2025-04-03 03:53:56,637 - INFO - Processed 1500/7510 jobs...
+2025-04-03 03:53:56,648 - INFO - Processed 1600/7510 jobs...
+2025-04-03 03:53:57,005 - INFO - Processed 1700/7510 jobs...
+2025-04-03 03:53:57,342 - INFO - Processed 1800/7510 jobs...
+2025-04-03 03:53:57,789 - INFO - Processed 1900/7510 jobs...
+2025-04-03 03:53:57,810 - INFO - Processed 2000/7510 jobs...
+2025-04-03 03:53:57,830 - INFO - Processed 2100/7510 jobs...
+2025-04-03 03:53:58,590 - INFO - Processed 2200/7510 jobs...
+2025-04-03 03:54:01,316 - INFO - Processed 2300/7510 jobs...
+2025-04-03 03:54:01,318 - INFO - Processed 2400/7510 jobs...
+2025-04-03 03:54:01,318 - INFO - Processed 2500/7510 jobs...
+2025-04-03 03:54:01,319 - INFO - Processed 2600/7510 jobs...
+2025-04-03 03:54:01,320 - INFO - Processed 2700/7510 jobs...
+2025-04-03 03:54:03,709 - INFO - Processed 2800/7510 jobs...
+2025-04-03 03:54:03,713 - INFO - Processed 2900/7510 jobs...
+2025-04-03 03:54:06,338 - INFO - Processed 3000/7510 jobs...
+2025-04-03 03:54:06,362 - INFO - Processed 3100/7510 jobs...
+2025-04-03 03:54:06,385 - INFO - Processed 3200/7510 jobs...
+2025-04-03 03:54:07,885 - INFO - Processed 3300/7510 jobs...
+2025-04-03 03:54:10,034 - INFO - Processed 3400/7510 jobs...
+2025-04-03 03:54:12,297 - INFO - Processed 3500/7510 jobs...
+2025-04-03 03:54:20,502 - INFO - Processed 3600/7510 jobs...
+2025-04-03 03:54:21,661 - INFO - Processed 3700/7510 jobs...
+2025-04-03 03:54:30,664 - INFO - Processed 3800/7510 jobs...
+2025-04-03 03:54:31,361 - INFO - Processed 3900/7510 jobs...
+2025-04-03 03:54:31,454 - INFO - Processed 4000/7510 jobs...
+2025-04-03 03:54:31,459 - INFO - Processed 4100/7510 jobs...
+2025-04-03 03:54:35,795 - INFO - Processed 4200/7510 jobs...
+2025-04-03 03:54:39,345 - INFO - Processed 4300/7510 jobs...
+2025-04-03 03:54:39,396 - INFO - Processed 4400/7510 jobs...
+2025-04-03 03:54:40,646 - ERROR - Error processing job 5860172003: bad character range \s-, at position 7
+2025-04-03 03:54:41,876 - INFO - Processed 4500/7510 jobs...
+2025-04-03 03:54:42,779 - ERROR - Error processing job 6529610003: bad character range \s-, at position 7
+2025-04-03 03:54:43,753 - ERROR - Error processing job 6529614003: bad character range \s-, at position 7
+2025-04-03 03:54:44,137 - ERROR - Error processing job 6529613003: bad character range \s-, at position 7
+2025-04-03 03:54:44,908 - ERROR - Error processing job 6529612003: bad character range \s-, at position 7
+2025-04-03 03:54:45,954 - ERROR - Error processing job 6530731003: bad character range \s-, at position 7
+2025-04-03 03:54:47,123 - ERROR - Error processing job 6528075003: bad character range \s-, at position 7
+2025-04-03 03:54:48,125 - ERROR - Error processing job 6527999003: bad character range \s-, at position 7
+2025-04-03 03:54:49,228 - ERROR - Error processing job 6530734003: bad character range \s-, at position 7
+2025-04-03 03:54:51,989 - ERROR - Error processing job 6530733003: bad character range \s-, at position 7
+2025-04-03 03:54:52,107 - INFO - Processed 4600/7510 jobs...
+2025-04-03 03:54:52,157 - INFO - Processed 4700/7510 jobs...
+2025-04-03 03:54:52,263 - INFO - Processed 4800/7510 jobs...
+2025-04-03 03:54:52,287 - INFO - Processed 4900/7510 jobs...
+2025-04-03 03:54:52,291 - INFO - Processed 5000/7510 jobs...
+2025-04-03 03:54:52,294 - INFO - Processed 5100/7510 jobs...
+2025-04-03 03:54:52,296 - INFO - Processed 5200/7510 jobs...
+2025-04-03 03:54:52,297 - INFO - Processed 5300/7510 jobs...
+2025-04-03 03:54:52,301 - INFO - Processed 5400/7510 jobs...
+2025-04-03 03:54:52,303 - INFO - Processed 5500/7510 jobs...
+2025-04-03 03:54:53,196 - ERROR - Error processing job 6759022: bad character range \s-, at position 7
+2025-04-03 03:54:55,489 - ERROR - Error processing job 6366658: bad character range \s-, at position 7
+2025-04-03 03:54:55,521 - ERROR - Error processing job 6366648: bad character range \s-, at position 7
+2025-04-03 03:54:57,284 - ERROR - Error processing job 6366682: bad character range \s-, at position 7
+2025-04-03 03:54:57,297 - ERROR - Error processing job 6366676: bad character range \s-, at position 7
+2025-04-03 03:54:57,298 - INFO - Processed 5600/7510 jobs...
+2025-04-03 03:54:59,403 - INFO - Processed 5700/7510 jobs...
+2025-04-03 03:55:00,678 - INFO - Processed 5800/7510 jobs...
+2025-04-03 03:55:01,984 - INFO - Processed 5900/7510 jobs...
+2025-04-03 03:55:03,469 - INFO - Processed 6000/7510 jobs...
+2025-04-03 03:55:04,218 - INFO - Processed 6100/7510 jobs...
+2025-04-03 03:55:04,272 - INFO - Processed 6200/7510 jobs...
+2025-04-03 03:55:09,967 - INFO - Processed 6300/7510 jobs...
+2025-04-03 03:55:10,012 - INFO - Processed 6400/7510 jobs...
+2025-04-03 03:55:10,013 - INFO - Processed 6500/7510 jobs...
+2025-04-03 03:55:10,015 - INFO - Processed 6600/7510 jobs...
+2025-04-03 03:55:10,016 - INFO - Processed 6700/7510 jobs...
+2025-04-03 03:55:10,018 - INFO - Processed 6800/7510 jobs...
+2025-04-03 03:55:10,020 - INFO - Processed 6900/7510 jobs...
+2025-04-03 03:55:13,536 - INFO - Processed 7000/7510 jobs...
+2025-04-03 03:55:13,552 - INFO - Processed 7100/7510 jobs...
+2025-04-03 03:55:16,032 - INFO - Processed 7200/7510 jobs...
+2025-04-03 03:55:16,036 - INFO - Processed 7300/7510 jobs...
+2025-04-03 03:55:16,897 - INFO - Processed 7400/7510 jobs...
+2025-04-03 03:55:17,045 - INFO - Processed 7500/7510 jobs...
+2025-04-03 03:55:17,046 - INFO - Filtered to 93 recent tech jobs
+2025-04-03 03:55:17,057 - INFO - Successfully saved 93 jobs to tech_jobs.json
+2025-04-03 03:55:17,066 - INFO - Successfully saved 93 jobs to tech_jobs.csv
+2025-04-03 03:55:17,279 - INFO - Successfully saved 93 jobs to tech_jobs.xlsx
+2025-04-03 04:04:09,112 - INFO - Loaded 100 companies from E:\Projects\Graduate\Auto Apply\job_scraper\output\greenhouse_companies_batch_000.csv
+2025-04-03 04:04:10,273 - INFO - Found 21 jobs for Alma (token: alma)
+2025-04-03 04:04:10,274 - INFO - Progress: 1/100 companies processed
+2025-04-03 04:04:10,310 - INFO - Found 52 jobs for ALTEN Technology USA (token: altentechnologyusa)
+2025-04-03 04:04:10,334 - INFO - Found 47 jobs for 6sense (token: 6sense)
+2025-04-03 04:04:10,335 - INFO - Found 5 jobs for  Bloomerang (token: bloomerang)
+2025-04-03 04:04:10,393 - INFO - Found 32 jobs for Alpaca  (token: alpaca)
+2025-04-03 04:04:10,417 - INFO - Found 25 jobs for Altos Labs (token: altoslabs)
+2025-04-03 04:04:10,456 - INFO - Found 5 jobs for Alt (token: alt)
+2025-04-03 04:04:10,475 - INFO - Progress: 2/100 companies processed
+2025-04-03 04:04:10,530 - INFO - Found 147 jobs for Affirm (token: affirm)
+2025-04-03 04:04:10,581 - INFO - Found 160 jobs for Anthropic (token: anthropic)
+2025-04-03 04:04:10,678 - INFO - Progress: 3/100 companies processed
+2025-04-03 04:04:10,692 - INFO - Found 8 jobs for Branch (token: branch)
+2025-04-03 04:04:10,749 - INFO - Found 18 jobs for Calendly (token: calendly)
+2025-04-03 04:04:10,830 - INFO - Found 68 jobs for Collectors (token: collectorsuniverse)
+2025-04-03 04:04:10,880 - INFO - Progress: 4/100 companies processed
+2025-04-03 04:04:10,900 - INFO - Found 36 jobs for ClickHouse (token: clickhouse)
+2025-04-03 04:04:10,903 - INFO - Found 2 jobs for Arc & Codementor (token: arcdev)
+2025-04-03 04:04:10,978 - INFO - Found 655 jobs for Capco (token: capco)
+2025-04-03 04:04:10,985 - INFO - Found 40 jobs for Cohere Health (token: coherehealth)
+2025-04-03 04:04:10,997 - INFO - Found 25 jobs for Career TEAM (token: careerteam)
+2025-04-03 04:04:11,083 - INFO - Progress: 5/100 companies processed
+2025-04-03 04:04:11,109 - INFO - Found 12 jobs for Customer.io (token: customerio)
+2025-04-03 04:04:11,156 - INFO - Found 2 jobs for Community Change (token: communitychange)
+2025-04-03 04:04:11,204 - INFO - Found 64 jobs for DeepMind (token: deepmind)
+2025-04-03 04:04:11,284 - INFO - Progress: 6/100 companies processed
+2025-04-03 04:04:11,320 - INFO - Found 29 jobs for Element Biosciences (token: elementbiosciences)
+2025-04-03 04:04:11,341 - INFO - Found 74 jobs for Dataiku (token: dataiku)
+2025-04-03 04:04:11,377 - INFO - Found 19 jobs for DistantJob (token: distantjob)
+2025-04-03 04:04:11,397 - INFO - Found 5 jobs for Dagster Labs (token: dagsterlabs)
+2025-04-03 04:04:11,457 - INFO - Found 34 jobs for Fetch (token: fetchrewards)
+2025-04-03 04:04:11,481 - INFO - Found 2 jobs for Entry Level Roles (token: entrylevelrolesinternalonly)
+2025-04-03 04:04:11,485 - INFO - Progress: 7/100 companies processed
+2025-04-03 04:04:11,601 - INFO - Found 66 jobs for Cresco Labs (token: crescolabs)
+2025-04-03 04:04:11,687 - INFO - Progress: 8/100 companies processed
+2025-04-03 04:04:11,752 - INFO - Found 36 jobs for G2 (token: g2crowd)
+2025-04-03 04:04:11,766 - INFO - Found 30 jobs for GOAT Group (token: goatgroup)
+2025-04-03 04:04:11,782 - INFO - Found 52 jobs for Flex (token: flex)
+2025-04-03 04:04:11,809 - INFO - Found 9 jobs for Forethought (token: forethought)
+2025-04-03 04:04:11,889 - INFO - Progress: 9/100 companies processed
+2025-04-03 04:04:11,920 - INFO - Found 124 jobs for Figma (token: figma)
+2025-04-03 04:04:11,929 - INFO - Found 2 jobs for General Assembly Remote Jobs  (token: remote)
+2025-04-03 04:04:11,989 - INFO - Found 32 jobs for GHX (token: globalhealthcareexchangeinc)
+2025-04-03 04:04:12,048 - INFO - Found 16 jobs for Genies, Inc.  (token: genies)
+2025-04-03 04:04:12,092 - INFO - Progress: 10/100 companies processed
+2025-04-03 04:04:12,197 - INFO - Found 115 jobs for Glean (token: gleanwork)
+2025-04-03 04:04:12,200 - INFO - Found 3 jobs for Greenplaces (token: greenplaces)
+2025-04-03 04:04:12,294 - INFO - Progress: 11/100 companies processed
+2025-04-03 04:04:12,332 - INFO - Found 15 jobs for Grow Therapy (token: growtherapy)
+2025-04-03 04:04:12,407 - INFO - Found 37 jobs for Grammarly (token: grammarly)
+2025-04-03 04:04:12,474 - INFO - Found 108 jobs for Grafana Labs (token: grafanalabs)
+2025-04-03 04:04:12,496 - INFO - Progress: 12/100 companies processed
+2025-04-03 04:04:12,622 - INFO - Found 107 jobs for Internal Job Board (token: internaljobsatlush)
+2025-04-03 04:04:12,691 - INFO - Found 7 jobs for Invisible Technologies (token: invisibletech)
+2025-04-03 04:04:12,698 - INFO - Progress: 13/100 companies processed
+2025-04-03 04:04:12,821 - INFO - Found 382 jobs for Hibu (token: hibu)
+2025-04-03 04:04:12,829 - INFO - Found 12 jobs for MatX (token: matx)
+2025-04-03 04:04:12,832 - INFO - Found 2 jobs for Internship and Full-Time (token: internshipsandftjobboard)
+2025-04-03 04:04:12,845 - INFO - Found 45 jobs for Job Board (token: corelight)
+2025-04-03 04:04:12,900 - INFO - Progress: 14/100 companies processed
+2025-04-03 04:04:13,018 - INFO - Found 57 jobs for Moloco (token: moloco)
+2025-04-03 04:04:13,110 - INFO - Found 26 jobs for Mozilla (token: mozilla)
+2025-04-03 04:04:13,110 - INFO - Progress: 15/100 companies processed
+2025-04-03 04:04:13,253 - INFO - Found 21 jobs for Newsela (token: newsela)
+2025-04-03 04:04:13,313 - INFO - Found 71 jobs for Neuralink (token: neuralink)
+2025-04-03 04:04:13,314 - INFO - Progress: 16/100 companies processed
+2025-04-03 04:04:13,334 - INFO - Found 140 jobs for Motive (token: gomotive)
+2025-04-03 04:04:13,343 - INFO - Found 29 jobs for Nurix (token: nurix)
+2025-04-03 04:04:13,347 - INFO - Found 16 jobs for OfferFit (token: offerfit)
+2025-04-03 04:04:13,371 - INFO - Found 36 jobs for NewsBreak (token: newsbreak)
+2025-04-03 04:04:13,516 - INFO - Progress: 17/100 companies processed
+2025-04-03 04:04:13,604 - INFO - Found 50 jobs for Pair Team (token: pairteam)
+2025-04-03 04:04:13,627 - INFO - Found 42 jobs for PMG (token: pmg)
+2025-04-03 04:04:13,639 - INFO - Found 9 jobs for Paradigm Health (token: paradigminccareersopenpositions)
+2025-04-03 04:04:13,718 - INFO - Progress: 18/100 companies processed
+2025-04-03 04:04:13,759 - INFO - Found 81 jobs for Oportun (token: oportun)
+2025-04-03 04:04:13,805 - INFO - Found 542 jobs for Outlier (token: outlier)
+2025-04-03 04:04:13,847 - INFO - Found 12 jobs for PBS Engineering & Environmental (token: pbs)
+2025-04-03 04:04:13,884 - INFO - Found 10 jobs for Pattern Data (token: patterndata)
+2025-04-03 04:04:13,901 - INFO - Found 58 jobs for Perplexity AI (token: perplexityai)
+2025-04-03 04:04:13,923 - INFO - Progress: 19/100 companies processed
+2025-04-03 04:04:14,045 - INFO - Found 6 jobs for ProPublica (token: propublica)
+2025-04-03 04:04:14,080 - INFO - Found 11 jobs for Platform Science (token: platformscience)
+2025-04-03 04:04:14,102 - INFO - Found 82 jobs for Postman (token: postman)
+2025-04-03 04:04:14,124 - INFO - Progress: 20/100 companies processed
+2025-04-03 04:04:14,391 - INFO - Found 517 jobs for DoorDash USA (token: doordashusa)
+2025-04-03 04:04:14,392 - INFO - Progress: 21/100 companies processed
+2025-04-03 04:04:14,421 - INFO - Found 99 jobs for Quince (token: quince)
+2025-04-03 04:04:14,458 - INFO - Found 7 jobs for Prodigal (token: prodigal)
+2025-04-03 04:04:14,577 - INFO - Found 193 jobs for Remote (token: remotecom)
+2025-04-03 04:04:14,605 - INFO - Found 233 jobs for Pure Storage (token: purestorage)
+2025-04-03 04:04:14,605 - INFO - Progress: 22/100 companies processed
+2025-04-03 04:04:14,626 - INFO - Found 92 jobs for Remote - Referral Board (token: remotereferralboardinternaluseonly)
+2025-04-03 04:04:14,646 - INFO - Found 1 jobs for Remote Positions (token: opremote)
+2025-04-03 04:04:14,689 - INFO - Found 129 jobs for Reddit (token: reddit)
+2025-04-03 04:04:14,721 - INFO - Found 39 jobs for Roofr (token: roofr)
+2025-04-03 04:04:14,786 - INFO - Found 5 jobs for Remotasks (token: remotasks)
+2025-04-03 04:04:14,807 - INFO - Progress: 23/100 companies processed
+2025-04-03 04:04:14,869 - INFO - Found 13 jobs for Sand Tech Holdings Limited (token: sandtech)
+2025-04-03 04:04:14,879 - INFO - Found 15 jobs for Runway  (token: runwayml)
+2025-04-03 04:04:14,999 - INFO - Found 100 jobs for Smartsheet (token: smartsheet)
+2025-04-03 04:04:15,009 - INFO - Progress: 24/100 companies processed
+2025-04-03 04:04:15,051 - INFO - Found 56 jobs for Snorkel AI (token: snorkelai)
+2025-04-03 04:04:15,094 - INFO - Found 77 jobs for Spin Careers (token: digitalfemsa)
+2025-04-03 04:04:15,117 - INFO - Found 26 jobs for SmarterDx (token: smarterdx)
+2025-04-03 04:04:15,176 - INFO - Found 59 jobs for SPS-North America (token: spsnorthamerica)
+2025-04-03 04:04:15,182 - INFO - Found 26 jobs for Tech Holding (token: techholding)
+2025-04-03 04:04:15,216 - INFO - Progress: 25/100 companies processed
+2025-04-03 04:04:15,271 - INFO - Found 34 jobs for Tatari (token: tatari)
+2025-04-03 04:04:15,418 - INFO - Progress: 26/100 companies processed
+2025-04-03 04:04:15,448 - INFO - Found 55 jobs for Strive Health (token: strivehealth)
+2025-04-03 04:04:15,573 - INFO - Found 64 jobs for Tenable, Inc. (token: tenableinc)
+2025-04-03 04:04:15,589 - INFO - Found 38 jobs for Trace3 (token: trace3)
+2025-04-03 04:04:15,596 - INFO - Found 40 jobs for Underdog Sports (token: underdogfantasy)
+2025-04-03 04:04:15,619 - INFO - Progress: 27/100 companies processed
+2025-04-03 04:04:15,640 - INFO - Found 5 jobs for UpKeep (token: upkeep)
+2025-04-03 04:04:15,706 - INFO - Found 146 jobs for Tempus (token: tempus)
+2025-04-03 04:04:15,786 - INFO - Found 640 jobs for Warby Parker (token: warbyparker)
+2025-04-03 04:04:15,791 - INFO - Found 34 jobs for Twitch (token: twitch)
+2025-04-03 04:04:15,809 - INFO - Found 23 jobs for Upwork (token: upwork)
+2025-04-03 04:04:15,820 - INFO - Progress: 28/100 companies processed
+2025-04-03 04:04:15,918 - INFO - Found 99 jobs for Whatnot (token: whatnot)
+2025-04-03 04:04:16,022 - INFO - Progress: 29/100 companies processed
+2025-04-03 04:04:16,127 - INFO - Found 39 jobs for XPENG (token: xpengmotors)
+2025-04-03 04:04:16,144 - INFO - Found 30 jobs for Webflow (token: webflow)
+2025-04-03 04:04:16,171 - INFO - Found 20 jobs for WhiteTech (token: whitetech)
+2025-04-03 04:04:16,217 - INFO - Found 211 jobs for Xometry (token: xometry)
+2025-04-03 04:04:16,225 - INFO - Progress: 30/100 companies processed
+2025-04-03 04:04:16,349 - INFO - Found 19 jobs for cBEYONData (token: cbeyondata)
+2025-04-03 04:04:16,427 - INFO - Progress: 31/100 companies processed
+2025-04-03 04:04:16,629 - INFO - Progress: 32/100 companies processed
+2025-04-03 04:04:16,831 - INFO - Progress: 33/100 companies processed
+2025-04-03 04:04:16,968 - INFO - Found 241 jobs for Zscaler (token: zscaler)
+2025-04-03 04:04:17,033 - INFO - Progress: 34/100 companies processed
+2025-04-03 04:04:17,234 - INFO - Progress: 35/100 companies processed
+2025-04-03 04:04:17,436 - INFO - Progress: 36/100 companies processed
+2025-04-03 04:04:17,638 - INFO - Progress: 37/100 companies processed
+2025-04-03 04:04:17,839 - INFO - Progress: 38/100 companies processed
+2025-04-03 04:04:18,041 - INFO - Progress: 39/100 companies processed
+2025-04-03 04:04:18,243 - INFO - Progress: 40/100 companies processed
+2025-04-03 04:04:18,446 - INFO - Progress: 41/100 companies processed
+2025-04-03 04:04:18,648 - INFO - Progress: 42/100 companies processed
+2025-04-03 04:04:18,850 - INFO - Progress: 43/100 companies processed
+2025-04-03 04:04:19,052 - INFO - Progress: 44/100 companies processed
+2025-04-03 04:04:19,253 - INFO - Progress: 45/100 companies processed
+2025-04-03 04:04:19,455 - INFO - Progress: 46/100 companies processed
+2025-04-03 04:04:19,657 - INFO - Progress: 47/100 companies processed
+2025-04-03 04:04:19,860 - INFO - Progress: 48/100 companies processed
+2025-04-03 04:04:20,061 - INFO - Progress: 49/100 companies processed
+2025-04-03 04:04:20,262 - INFO - Progress: 50/100 companies processed
+2025-04-03 04:04:20,464 - INFO - Progress: 51/100 companies processed
+2025-04-03 04:04:20,666 - INFO - Progress: 52/100 companies processed
+2025-04-03 04:04:20,868 - INFO - Progress: 53/100 companies processed
+2025-04-03 04:04:21,070 - INFO - Progress: 54/100 companies processed
+2025-04-03 04:04:21,271 - INFO - Progress: 55/100 companies processed
+2025-04-03 04:04:21,473 - INFO - Progress: 56/100 companies processed
+2025-04-03 04:04:21,675 - INFO - Progress: 57/100 companies processed
+2025-04-03 04:04:21,877 - INFO - Progress: 58/100 companies processed
+2025-04-03 04:04:22,080 - INFO - Progress: 59/100 companies processed
+2025-04-03 04:04:22,282 - INFO - Progress: 60/100 companies processed
+2025-04-03 04:04:22,484 - INFO - Progress: 61/100 companies processed
+2025-04-03 04:04:22,687 - INFO - Progress: 62/100 companies processed
+2025-04-03 04:04:22,889 - INFO - Progress: 63/100 companies processed
+2025-04-03 04:04:23,091 - INFO - Progress: 64/100 companies processed
+2025-04-03 04:04:23,293 - INFO - Progress: 65/100 companies processed
+2025-04-03 04:04:23,496 - INFO - Progress: 66/100 companies processed
+2025-04-03 04:04:23,697 - INFO - Progress: 67/100 companies processed
+2025-04-03 04:04:23,900 - INFO - Progress: 68/100 companies processed
+2025-04-03 04:04:24,102 - INFO - Progress: 69/100 companies processed
+2025-04-03 04:04:24,303 - INFO - Progress: 70/100 companies processed
+2025-04-03 04:04:24,504 - INFO - Progress: 71/100 companies processed
+2025-04-03 04:04:24,705 - INFO - Progress: 72/100 companies processed
+2025-04-03 04:04:24,908 - INFO - Progress: 73/100 companies processed
+2025-04-03 04:04:25,110 - INFO - Progress: 74/100 companies processed
+2025-04-03 04:04:25,313 - INFO - Progress: 75/100 companies processed
+2025-04-03 04:04:25,515 - INFO - Progress: 76/100 companies processed
+2025-04-03 04:04:25,716 - INFO - Progress: 77/100 companies processed
+2025-04-03 04:04:25,919 - INFO - Progress: 78/100 companies processed
+2025-04-03 04:04:26,120 - INFO - Progress: 79/100 companies processed
+2025-04-03 04:04:26,324 - INFO - Progress: 80/100 companies processed
+2025-04-03 04:04:26,525 - INFO - Progress: 81/100 companies processed
+2025-04-03 04:04:26,728 - INFO - Progress: 82/100 companies processed
+2025-04-03 04:04:26,930 - INFO - Progress: 83/100 companies processed
+2025-04-03 04:04:27,133 - INFO - Progress: 84/100 companies processed
+2025-04-03 04:04:27,335 - INFO - Progress: 85/100 companies processed
+2025-04-03 04:04:27,536 - INFO - Progress: 86/100 companies processed
+2025-04-03 04:04:27,737 - INFO - Progress: 87/100 companies processed
+2025-04-03 04:04:27,938 - INFO - Progress: 88/100 companies processed
+2025-04-03 04:04:28,139 - INFO - Progress: 89/100 companies processed
+2025-04-03 04:04:28,340 - INFO - Progress: 90/100 companies processed
+2025-04-03 04:04:28,541 - INFO - Progress: 91/100 companies processed
+2025-04-03 04:04:28,743 - INFO - Progress: 92/100 companies processed
+2025-04-03 04:04:28,944 - INFO - Progress: 93/100 companies processed
+2025-04-03 04:04:29,145 - INFO - Progress: 94/100 companies processed
+2025-04-03 04:04:29,346 - INFO - Progress: 95/100 companies processed
+2025-04-03 04:04:29,547 - INFO - Progress: 96/100 companies processed
+2025-04-03 04:04:29,748 - INFO - Progress: 97/100 companies processed
+2025-04-03 04:04:29,949 - INFO - Progress: 98/100 companies processed
+2025-04-03 04:04:30,150 - INFO - Progress: 99/100 companies processed
+2025-04-03 04:04:30,351 - INFO - Progress: 100/100 companies processed
+2025-04-03 04:04:30,552 - INFO - Fetched a total of 7511 jobs from 100 companies
+2025-04-03 04:04:36,518 - INFO - Processed 100/7511 jobs...
+2025-04-03 04:04:41,330 - INFO - Processed 200/7511 jobs...
+2025-04-03 04:04:44,851 - INFO - Processed 300/7511 jobs...
+2025-04-03 04:04:54,736 - INFO - Processed 400/7511 jobs...
+2025-04-03 04:04:58,295 - ERROR - Error processing job 4074964008: bad character range \s-, at position 7
+2025-04-03 04:05:00,625 - ERROR - Error processing job 4554982008: bad character range \s-, at position 7
+2025-04-03 04:05:02,125 - ERROR - Error processing job 4610069008: bad character range \s-, at position 7
+2025-04-03 04:05:02,126 - INFO - Processed 500/7511 jobs...
+2025-04-03 04:05:02,804 - ERROR - Error processing job 7923954002: bad character range \s-, at position 7
+2025-04-03 04:05:03,369 - INFO - Processed 600/7511 jobs...
+2025-04-03 04:05:18,268 - INFO - Processed 700/7511 jobs...
+2025-04-03 04:05:27,425 - INFO - Processed 800/7511 jobs...
+2025-04-03 04:05:38,528 - INFO - Processed 900/7511 jobs...
+2025-04-03 04:05:52,499 - INFO - Processed 1000/7511 jobs...
+2025-04-03 04:06:12,552 - INFO - Processed 1100/7511 jobs...
+2025-04-03 04:06:13,534 - INFO - Processed 1200/7511 jobs...
+2025-04-03 04:06:23,914 - INFO - Processed 1300/7511 jobs...
+2025-04-03 04:06:31,160 - INFO - Processed 1400/7511 jobs...
+2025-04-03 04:06:46,060 - INFO - Processed 1500/7511 jobs...
+2025-04-03 04:06:54,135 - INFO - Processed 1600/7511 jobs...
+2025-04-03 04:06:58,006 - INFO - Processed 1700/7511 jobs...
+2025-04-03 04:07:00,167 - INFO - Processed 1800/7511 jobs...
+2025-04-03 04:07:02,047 - INFO - Processed 1900/7511 jobs...
+2025-04-03 04:07:06,352 - INFO - Processed 2000/7511 jobs...
+2025-04-03 04:07:13,825 - INFO - Processed 2100/7511 jobs...
+2025-04-03 04:07:17,180 - INFO - Processed 2200/7511 jobs...
+2025-04-03 04:07:17,407 - INFO - Processed 2300/7511 jobs...
+2025-04-03 04:07:21,371 - INFO - Processed 2400/7511 jobs...
+2025-04-03 04:07:21,372 - INFO - Processed 2500/7511 jobs...
+2025-04-03 04:07:21,372 - INFO - Processed 2600/7511 jobs...
+2025-04-03 04:07:21,374 - INFO - Processed 2700/7511 jobs...
+2025-04-03 04:07:21,988 - INFO - Processed 2800/7511 jobs...
+2025-04-03 04:07:28,523 - ERROR - Error processing job 6752815: bad character range \s-, at position 7
+2025-04-03 04:07:28,557 - INFO - Processed 2900/7511 jobs...
+2025-04-03 04:07:40,592 - INFO - Processed 3000/7511 jobs...
+2025-04-03 04:07:44,255 - INFO - Processed 3100/7511 jobs...
+2025-04-03 04:07:50,703 - INFO - Processed 3200/7511 jobs...
+2025-04-03 04:07:53,206 - INFO - Processed 3300/7511 jobs...
+2025-04-03 04:07:53,293 - INFO - Processed 3400/7511 jobs...
+2025-04-03 04:07:53,295 - INFO - Processed 3500/7511 jobs...
+2025-04-03 04:07:53,296 - INFO - Processed 3600/7511 jobs...
+2025-04-03 04:07:53,298 - INFO - Processed 3700/7511 jobs...
+2025-04-03 04:07:53,300 - INFO - Processed 3800/7511 jobs...
+2025-04-03 04:07:53,303 - INFO - Processed 3900/7511 jobs...
+2025-04-03 04:07:55,156 - INFO - Processed 4000/7511 jobs...
+2025-04-03 04:07:58,440 - INFO - Processed 4100/7511 jobs...
+2025-04-03 04:08:02,447 - INFO - Processed 4200/7511 jobs...
+2025-04-03 04:08:03,741 - INFO - Processed 4300/7511 jobs...
+2025-04-03 04:08:14,627 - INFO - Processed 4400/7511 jobs...
+2025-04-03 04:08:15,767 - INFO - Processed 4500/7511 jobs...
+2025-04-03 04:08:25,861 - INFO - Processed 4600/7511 jobs...
+2025-04-03 04:08:28,895 - INFO - Processed 4700/7511 jobs...
+2025-04-03 04:08:30,096 - ERROR - Error processing job 6529610003: bad character range \s-, at position 7
+2025-04-03 04:08:31,124 - ERROR - Error processing job 6529614003: bad character range \s-, at position 7
+2025-04-03 04:08:33,834 - ERROR - Error processing job 6529613003: bad character range \s-, at position 7
+2025-04-03 04:08:35,298 - ERROR - Error processing job 6529612003: bad character range \s-, at position 7
+2025-04-03 04:08:36,375 - ERROR - Error processing job 6530731003: bad character range \s-, at position 7
+2025-04-03 04:08:37,344 - ERROR - Error processing job 6528075003: bad character range \s-, at position 7
+2025-04-03 04:08:38,381 - ERROR - Error processing job 6527999003: bad character range \s-, at position 7
+2025-04-03 04:08:39,381 - ERROR - Error processing job 6530734003: bad character range \s-, at position 7
+2025-04-03 04:08:40,504 - ERROR - Error processing job 6530733003: bad character range \s-, at position 7
+2025-04-03 04:08:42,288 - INFO - Processed 4800/7511 jobs...
+2025-04-03 04:08:42,608 - INFO - Processed 4900/7511 jobs...
+2025-04-03 04:08:46,277 - INFO - Processed 5000/7511 jobs...
+2025-04-03 04:08:50,872 - INFO - Processed 5100/7511 jobs...
+2025-04-03 04:08:53,347 - ERROR - Error processing job 5860172003: bad character range \s-, at position 7
+2025-04-03 04:08:55,038 - INFO - Processed 5200/7511 jobs...
+2025-04-03 04:08:56,206 - ERROR - Error processing job 6580815: bad character range \s-, at position 7
+2025-04-03 04:08:56,739 - ERROR - Error processing job 6742320: bad character range \s-, at position 7
+2025-04-03 04:08:57,275 - INFO - Processed 5300/7511 jobs...
+2025-04-03 04:08:58,763 - ERROR - Error processing job 4538235005: bad character range \s-, at position 7
+2025-04-03 04:08:58,765 - INFO - Processed 5400/7511 jobs...
+2025-04-03 04:08:59,277 - ERROR - Error processing job 6759022: bad character range \s-, at position 7
+2025-04-03 04:08:59,777 - INFO - Processed 5500/7511 jobs...
+2025-04-03 04:09:00,528 - ERROR - Error processing job 6366658: bad character range \s-, at position 7
+2025-04-03 04:09:00,544 - ERROR - Error processing job 6366648: bad character range \s-, at position 7
+2025-04-03 04:09:02,227 - ERROR - Error processing job 6366682: bad character range \s-, at position 7
+2025-04-03 04:09:02,241 - ERROR - Error processing job 6366676: bad character range \s-, at position 7
+2025-04-03 04:09:06,131 - INFO - Processed 5600/7511 jobs...
+2025-04-03 04:09:16,094 - INFO - Processed 5700/7511 jobs...
+2025-04-03 04:09:19,559 - INFO - Processed 5800/7511 jobs...
+2025-04-03 04:09:23,041 - ERROR - Error processing job 4019356008: bad character range \s-, at position 7
+2025-04-03 04:09:23,726 - INFO - Processed 5900/7511 jobs...
+2025-04-03 04:09:25,809 - INFO - Processed 6000/7511 jobs...
+2025-04-03 04:09:35,968 - INFO - Processed 6100/7511 jobs...
+2025-04-03 04:09:37,667 - INFO - Processed 6200/7511 jobs...
+2025-04-03 04:09:37,669 - INFO - Processed 6300/7511 jobs...
+2025-04-03 04:09:37,670 - INFO - Processed 6400/7511 jobs...
+2025-04-03 04:09:37,672 - INFO - Processed 6500/7511 jobs...
+2025-04-03 04:09:37,673 - INFO - Processed 6600/7511 jobs...
+2025-04-03 04:09:37,693 - INFO - Processed 6700/7511 jobs...
+2025-04-03 04:09:38,899 - INFO - Processed 6800/7511 jobs...
+2025-04-03 04:09:42,020 - INFO - Processed 6900/7511 jobs...
+2025-04-03 04:09:44,747 - INFO - Processed 7000/7511 jobs...
+2025-04-03 04:09:48,090 - INFO - Processed 7100/7511 jobs...
+2025-04-03 04:09:51,402 - INFO - Processed 7200/7511 jobs...
+2025-04-03 04:09:51,461 - INFO - Processed 7300/7511 jobs...
+2025-04-03 04:09:52,489 - INFO - Processed 7400/7511 jobs...
+2025-04-03 04:09:54,131 - INFO - Processed 7500/7511 jobs...
+2025-04-03 04:09:54,154 - INFO - Filtered to 250 recent tech jobs
+2025-04-03 04:09:54,184 - INFO - Successfully saved 250 jobs to tech_jobs.json
+2025-04-03 04:09:54,197 - INFO - Successfully saved 250 jobs to tech_jobs.csv
+2025-04-03 04:09:54,396 - INFO - Successfully saved 250 jobs to tech_jobs.xlsx

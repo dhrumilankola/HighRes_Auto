@@ -23,7 +23,7 @@ class LocalPlaywrightComputer(AsyncComputer):
 
     async def _get_browser_and_page(self) -> tuple[Browser, Page]:
         width, height = self.dimensions
-        browser = await self.playwright.chromium.launch(headless=False, args=[f"--window-size={width},{height}"])
+        browser = await self.playwright.chromium.launch(headless=True, args=[f"--window-size={width},{height}"])
         page = await browser.new_page()
         await page.set_viewport_size({"width": width, "height": height})
         await page.goto(self.job_url)

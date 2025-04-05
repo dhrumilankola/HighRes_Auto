@@ -1,6 +1,7 @@
+// src/app/api/queue/route.js
+
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+const queueUtils = require('../../../../queue_system/queue_utils');
 
 export async function POST(request) {
   try {
@@ -10,55 +11,42 @@ export async function POST(request) {
       return NextResponse.json({ message: 'No jobs provided' }, { status: 400 });
     }
 
-    // In a real implementation, you would:
-    // 1. Validate the jobs
-    // 2. Connect to your queue system (RQ in your case)
-    // 3. Add the jobs to the queue
+    const results = [];
+    let successCount = 0;
 
-    // For now, we'll just log them and simulate adding to a queue
-    console.log(`Adding ${jobs.length} jobs to the queue`);
-    
-    // Write to a queue file (simulation)
-    const queueFilePath = path.join(process.cwd(), '../../queue_system/queue.json');
-    const queueDir = path.dirname(queueFilePath);
-    
-    // Create directory if it doesn't exist
-    if (!fs.existsSync(queueDir)) {
-      fs.mkdirSync(queueDir, { recursive: true });
-    }
-    
-    // Check if file exists and read it
-    let queueData = [];
-    if (fs.existsSync(queueFilePath)) {
-      try {
-        const fileData = fs.readFileSync(queueFilePath, 'utf8');
-        queueData = JSON.parse(fileData);
-      } catch (error) {
-        console.error('Error reading existing queue file:', error);
+    // Add each job to the queue
+    for (const job of jobs) {
+      const result = queueUtils.addToQueue(job);
+      if (result.success) {
+        successCount++;
       }
+      results.push(result);
     }
-    
-    // Add new jobs to queue
-    const updatedQueue = [
-      ...queueData,
-      ...jobs.map(job => ({
-        ...job,
-        queued_at: new Date().toISOString(),
-        status: 'pending'
-      }))
-    ];
-    
-    // Write back to file
-    fs.writeFileSync(queueFilePath, JSON.stringify(updatedQueue, null, 2));
-    
-    // Return success
+
+    // Return success response
     return NextResponse.json({ 
-      message: `Successfully added ${jobs.length} jobs to the queue`,
-      queue_size: updatedQueue.length
+      message: `Successfully added ${successCount} of ${jobs.length} jobs to the queue`,
+      results,
+      queue_stats: queueUtils.getQueueStats()
     });
     
   } catch (error) {
     console.error('Error adding jobs to queue:', error);
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
+  }
+}
+
+// Get queue status
+export async function GET() {
+  try {
+    const stats = queueUtils.getQueueStats();
+    
+    return NextResponse.json({
+      queue_stats: stats,
+      total: Object.values(stats).reduce((a, b) => a + b, 0)
+    });
+  } catch (error) {
+    console.error('Error getting queue stats:', error);
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
 }

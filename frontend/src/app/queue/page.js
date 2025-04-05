@@ -1,188 +1,173 @@
+// src/app/queue/page.js
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaSpinner, FaCheck, FaClock, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
-
+import { FaSpinner, FaClock, FaRocket, FaCheck, FaTimes, FaExclamationTriangle } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 export default function QueuePage() {
-  const [queuedJobs, setQueuedJobs] = useState([]);
-  const [appliedJobs, setAppliedJobs] = useState([]);
+  const [jobs, setJobs] = useState({});
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('all');
 
-  useEffect(() => {
-    const fetchQueuedJobs = async () => {
-      try {
-        // In a production app, this would be an API call
-        // For now, we'll use localStorage as a mock backend
-        const storedQueuedJobs = localStorage.getItem('queuedJobs');
-        const storedAppliedJobs = localStorage.getItem('appliedJobs');
-        
-        if (storedQueuedJobs) {
-          // Parse the stored jobs and add default status if not present
-          const jobs = JSON.parse(storedQueuedJobs).map(job => ({
-            ...job,
-            status: job.status || 'Awaiting', // Default status is Awaiting
-            statusMessage: job.statusMessage || 'Waiting to process',
-          }));
-          setQueuedJobs(jobs);
-        }
-        
-        if (storedAppliedJobs) {
-          setAppliedJobs(JSON.parse(storedAppliedJobs));
-        }
-      } catch (error) {
-        console.error('Error fetching queued jobs:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchQueuedJobs();
-  }, []);
-
-  // Function to update job status (for demo purposes)
-  const updateJobStatus = (jobId, newStatus, message = '') => {
-    setQueuedJobs(prev => 
-      prev.map(job => 
-        job.id === jobId 
-          ? { ...job, status: newStatus, statusMessage: message || job.statusMessage }
-          : job
-      )
-    );
-    
-    // Save to localStorage
-    localStorage.setItem('queuedJobs', JSON.stringify(
-      queuedJobs.map(job => 
-        job.id === jobId 
-          ? { ...job, status: newStatus, statusMessage: message || job.statusMessage }
-          : job
-      )
-    ));
-  };
-
-  // Function to move a job to applied list
-  const moveToApplied = (jobId) => {
-    const jobToMove = queuedJobs.find(job => job.id === jobId);
-    if (!jobToMove) return;
-    
-    // Add to applied jobs
-    const updatedAppliedJobs = [...appliedJobs, {...jobToMove, completedAt: new Date().toISOString()}];
-    setAppliedJobs(updatedAppliedJobs);
-    
-    // Remove from queued jobs
-    setQueuedJobs(prev => prev.filter(job => job.id !== jobId));
-    
-    // Update localStorage
-    localStorage.setItem('appliedJobs', JSON.stringify(updatedAppliedJobs));
-    localStorage.setItem('queuedJobs', JSON.stringify(queuedJobs.filter(job => job.id !== jobId)));
-  };
-
-  // Function to cancel a job
-  const cancelJob = (jobId) => {
-    updateJobStatus(jobId, 'Cancelled', 'Application cancelled by user');
-  };
-
-  // Function to simulate auto-applying for demo purposes
-  const simulateAutoApply = () => {
-    if (queuedJobs.length === 0) return;
-    
-    // Find the first Awaiting job
-    const awaitingJob = queuedJobs.find(job => job.status === 'Awaiting');
-    if (!awaitingJob) return; // No awaiting jobs
-    
-    // Set job to Applying
-    updateJobStatus(awaitingJob.id, 'Applying', 'Bot is filling application form...');
-    
-    // Simulate process time
-    setTimeout(() => {
-      // 50% chance of success, 50% chance of needing interaction
-      const needsInteraction = Math.random() > 0.5;
+  const fetchJobs = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`/api/queue/jobs?status=${activeTab}`);
+      const data = await response.json();
       
-      if (needsInteraction) {
-        updateJobStatus(
-          awaitingJob.id, 
-          'Human Required', 
-          'This application requires human verification'
-        );
-        
-        // Automatically process the next job without requiring button press
-        setTimeout(() => simulateAutoApply(), 1000);
+      // Properly format the data based on activeTab
+      if (activeTab === 'all') {
+        setJobs(data.jobs || {});
       } else {
-        updateJobStatus(awaitingJob.id, 'Applied', 'Application submitted successfully');
-        // Move to applied list after a short delay
-        setTimeout(() => {
-          moveToApplied(awaitingJob.id);
-          
-          // Automatically process the next job
-          setTimeout(() => simulateAutoApply(), 1000);
-        }, 1500);
+        // Ensure we have an array for specific statuses
+        setJobs(Array.isArray(data.jobs) ? data.jobs : []);
       }
-    }, 3000);
+    } catch (error) {
+      console.error('Error fetching jobs:', error);
+      // Set appropriate default value based on tab
+      setJobs(activeTab === 'all' ? {} : []);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // For demo purposes, run the simulation when the page loads
   useEffect(() => {
-    const hasAwaitingJobs = !loading && queuedJobs.some(job => job.status === 'Awaiting');
-    
-    // Only start auto-processing if there are awaiting jobs and no job is currently being applied
-    if (hasAwaitingJobs && !queuedJobs.some(job => job.status === 'Applying')) {
-      // Add a small delay before starting to process jobs
-      const timer = setTimeout(() => {
-        simulateAutoApply();
-      }, 1000);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [loading, queuedJobs]);
+    fetchJobs();
+    // Refresh data every 10 seconds
+    const interval = setInterval(fetchJobs, 10000);
+    return () => clearInterval(interval);
+  }, [activeTab]);
 
-  // Status icon mapping
   const getStatusIcon = (status) => {
     switch (status) {
-      case 'Applying':
-        return <FaSpinner className="animate-spin text-blue-500" />;
-      case 'Applied':
+      case 'queued':
+        return <FaClock className="text-yellow-500" />;
+      case 'in_progress':
+        return <FaRocket className="text-blue-500" />;
+      case 'applied':
         return <FaCheck className="text-green-500" />;
-      case 'Human Required':
-        return <FaExclamationTriangle className="text-yellow-500" />;
-      case 'Cancelled':
+      case 'failed':
         return <FaTimes className="text-red-500" />;
+      case 'manual_review':
+        return <FaExclamationTriangle className="text-orange-500" />;
       default:
-        return <FaClock className="text-gray-500" />;
+        return null;
     }
   };
 
-  // Status color mapping
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Applying':
-        return 'bg-blue-100 text-blue-800';
-      case 'Applied':
-        return 'bg-green-100 text-green-800';
-      case 'Human Required':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'Cancelled':
-        return 'bg-red-100 text-red-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
+  const markAsAppliedManually = async (jobId) => {
+    try {
+      const response = await fetch(`/api/queue/jobs/${jobId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          status: 'applied',
+          details: {
+            notes: 'Applied manually by user',
+          },
+        }),
+      });
+      
+      if (response.ok) {
+        fetchJobs(); // Refresh the job list
+      } else {
+        console.error('Failed to mark job as applied');
+      }
+    } catch (error) {
+      console.error('Error marking job as applied:', error);
     }
   };
 
-  if (loading) {
+  const renderJobList = (jobList, status) => {
+    // Ensure jobList is always an array before trying to use .map()
+    const safeJobList = Array.isArray(jobList) ? jobList : [];
+    
+    if (safeJobList.length === 0) {
+      return (
+        <div className="text-center py-10 text-gray-500">
+          No jobs with status: {status}
+        </div>
+      );
+    }
+
     return (
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <Header />
-        <main className="flex-grow flex justify-center items-center">
-          <div className="flex items-center space-x-2">
-            <FaSpinner className="animate-spin h-6 w-6 text-blue-500" />
-            <span>Loading your application queue...</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {safeJobList.map((job) => (
+          <div key={job.id} className="card p-4">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 truncate">
+                {job.job_data.title}
+              </h3>
+              <div className="badge flex items-center gap-1">
+                {getStatusIcon(job.status)}
+                <span>{job.status}</span>
+              </div>
+            </div>
+            <div className="text-sm text-gray-500 mb-2">
+              {job.job_data.company} • {job.job_data.location}
+            </div>
+            <div className="text-xs text-gray-400 mb-2">
+              Added: {new Date(job.added_at).toLocaleString()}
+            </div>
+            {job.attempts > 0 && (
+              <div className="text-xs text-gray-400 mb-2">
+                Attempts: {job.attempts}
+              </div>
+            )}
+            
+            {job.notes && (
+              <div className="text-xs text-blue-500 mt-2 border-t pt-2">
+                Notes: {job.notes}
+              </div>
+            )}
+
+            {/* Applied Manually button - only for jobs needing review */}
+            {job.status === 'manual_review' && (
+              <div className="mt-2 pt-2 border-t">
+                <button
+                  onClick={() => markAsAppliedManually(job.id)}
+                  className="text-xs bg-green-100 hover:bg-green-200 text-green-800 px-2 py-1 rounded flex items-center"
+                >
+                  <FaCheck className="mr-1" /> Applied Manually
+                </button>
+              </div>
+            )}
+
+            {/* See Proof link for applied jobs */}
+            {job.status === 'applied' && job.screenshot && (
+              <div className="mt-2 pt-2 border-t">
+                <a 
+                  href={`/api/screenshots/${job.screenshot.split('/').pop()}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  <FaCheck className="mr-1" /> See Proof
+                </a>
+              </div>
+            )}
+
+            {/* Contact Support button for failed jobs */}
+            {job.error && job.status === 'failed' && (
+              <div className="text-xs mt-2 border-t pt-2">
+                <button 
+                  className="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded flex items-center text-xs"
+                  onClick={() => alert('Support functionality would be implemented here')}
+                >
+                  <FaExclamationTriangle className="mr-1" /> Contact Support
+                </button>
+              </div>
+            )}
           </div>
-        </main>
-        <Footer />
+        ))}
       </div>
     );
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -192,143 +177,110 @@ export default function QueuePage() {
         <div className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Application Queue</h1>
-              <p className="text-lg text-gray-600">
-                Track the status of your automated job applications
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                Application Queue
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Monitor and manage your automated job applications
               </p>
             </div>
-            
-            {/* Queue Section */}
-            <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-8">
-              <div className="px-4 py-5 sm:px-6 flex justify-between items-center">
-                <div>
-                  <h2 className="text-lg font-medium text-gray-900">Active Queue</h2>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Jobs currently in the application process
-                    {queuedJobs.some(job => job.status === 'Applying') && (
-                      <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        <FaSpinner className="animate-spin mr-1" />
-                        Auto-Processing
-                      </span>
+
+            <div className="flex justify-center mb-6 border-b">
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'all' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('all')}
+              >
+                All
+              </button>
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'queued' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('queued')}
+              >
+                Queued
+              </button>
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'in_progress' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('in_progress')}
+              >
+                In Progress
+              </button>
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'applied' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('applied')}
+              >
+                Applied
+              </button>
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'failed' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('failed')}
+              >
+                Failed
+              </button>
+              <button
+                className={`px-4 py-2 font-medium ${activeTab === 'manual_review' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
+                onClick={() => setActiveTab('manual_review')}
+              >
+                Needs Review
+              </button>
+            </div>
+
+            {loading ? (
+              <div className="flex justify-center items-center py-12">
+                <FaSpinner className="animate-spin h-8 w-8 text-blue-500" />
+                <span className="ml-2 text-gray-600">Loading jobs...</span>
+              </div>
+            ) : (
+              <>
+                {activeTab === 'all' ? (
+                  <>
+                    {Object.keys(jobs).length === 0 ? (
+                      <div className="text-center py-10 text-gray-500">
+                        No jobs in any queue
+                      </div>
+                    ) : (
+                      <>
+                        {jobs.queued?.length > 0 && (
+                          <div className="mb-8">
+                            <h2 className="text-xl font-semibold mb-4">Queued Jobs</h2>
+                            {renderJobList(jobs.queued, 'queued')}
+                          </div>
+                        )}
+                        
+                        {jobs.in_progress?.length > 0 && (
+                          <div className="mb-8">
+                            <h2 className="text-xl font-semibold mb-4">In Progress</h2>
+                            {renderJobList(jobs.in_progress, 'in_progress')}
+                          </div>
+                        )}
+                        
+                        {jobs.applied?.length > 0 && (
+                          <div className="mb-8">
+                            <h2 className="text-xl font-semibold mb-4">Applied</h2>
+                            {renderJobList(jobs.applied, 'applied')}
+                          </div>
+                        )}
+                        
+                        {jobs.failed?.length > 0 && (
+                          <div className="mb-8">
+                            <h2 className="text-xl font-semibold mb-4">Failed</h2>
+                            {renderJobList(jobs.failed, 'failed')}
+                          </div>
+                        )}
+                        
+                        {jobs.manual_review?.length > 0 && (
+                          <div className="mb-8">
+                            <h2 className="text-xl font-semibold mb-4">Needs Review</h2>
+                            {renderJobList(jobs.manual_review, 'manual_review')}
+                          </div>
+                        )}
+                      </>
                     )}
-                  </p>
-                </div>
-                {queuedJobs.some(job => job.status === 'Awaiting') && !queuedJobs.some(job => job.status === 'Applying') && (
-                  <button 
-                    className="btn-primary"
-                    onClick={simulateAutoApply}
-                  >
-                    Start Processing
-                  </button>
+                  </>
+                ) : (
+                  renderJobList(jobs, activeTab)
                 )}
-              </div>
-              
-              {queuedJobs.length > 0 ? (
-                <div className="border-t border-gray-200 divide-y divide-gray-200">
-                  {queuedJobs.map(job => (
-                    <div key={job.id} className="px-4 py-4 sm:px-6 hover:bg-gray-50">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <div className="flex-shrink-0 mr-4">
-                            {getStatusIcon(job.status)}
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-medium text-gray-900">{job.title}</h3>
-                            <p className="text-sm text-gray-500">{job.company}</p>
-                            <div className="mt-1 flex items-center">
-                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(job.status)}`}>
-                                {job.status}
-                              </span>
-                              <span className="ml-2 text-sm text-gray-500">{job.statusMessage}</span>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="flex space-x-2">
-                          {job.status === 'Human Required' && (
-                            <a 
-                              href={job.job_url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="btn-secondary text-xs"
-                            >
-                              Complete Manually
-                            </a>
-                          )}
-                          
-                          {job.status !== 'Cancelled' && job.status !== 'Applied' && (
-                            <button 
-                              onClick={() => cancelJob(job.id)}
-                              className="bg-red-600 hover:bg-red-700 text-white py-1 px-3 rounded text-xs"
-                            >
-                              Cancel
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="px-4 py-12 text-center border-t border-gray-200">
-                  <p className="text-gray-500">No jobs currently in the queue</p>
-                  <a href="/" className="mt-2 inline-block text-blue-600 hover:text-blue-800">
-                    Browse available jobs
-                  </a>
-                </div>
-              )}
-            </div>
-            
-            {/* Applied Jobs Section */}
-            <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-              <div className="px-4 py-5 sm:px-6">
-                <h2 className="text-lg font-medium text-gray-900">Applied Jobs</h2>
-                <p className="mt-1 text-sm text-gray-500">
-                  Applications that have been successfully submitted
-                </p>
-              </div>
-              
-              {appliedJobs.length > 0 ? (
-                <div className="border-t border-gray-200 divide-y divide-gray-200">
-                  {appliedJobs.map(job => (
-                    <div key={job.id} className="px-4 py-4 sm:px-6 hover:bg-gray-50">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <div className="flex-shrink-0 mr-4">
-                            <FaCheck className="text-green-500" />
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-medium text-gray-900">{job.title}</h3>
-                            <p className="text-sm text-gray-500">{job.company}</p>
-                            <div className="mt-1 flex items-center">
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                Applied
-                              </span>
-                              <span className="ml-2 text-sm text-gray-500">
-                                {new Date(job.completedAt).toLocaleDateString()}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <a 
-                          href={job.job_url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 text-sm"
-                        >
-                          View Job
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="px-4 py-12 text-center border-t border-gray-200">
-                  <p className="text-gray-500">No jobs have been applied to yet</p>
-                </div>
-              )}
-            </div>
+              </>
+            )}
           </div>
         </div>
       </main>

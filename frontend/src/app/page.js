@@ -78,37 +78,30 @@ export default function Home() {
       setQueueSubmitted(false);
       return;
     }
-
+  
     try {
       setLoading(true);
+      const response = await fetch('/api/queue', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ jobs: jobsToQueue }),
+      });
       
-      // Save the selected jobs to localStorage for the queue page to access
-      localStorage.setItem('queuedJobs', JSON.stringify(jobsToQueue));
-      
-      // Also try to post to API if available
-      try {
-        await fetch('/api/queue', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ jobs: jobsToQueue }),
-        });
-      } catch (apiError) {
-        console.warn('API call failed, but jobs saved to localStorage:', apiError);
-      }
-      
-      setQueueSubmitted(true);
-      
-      // In a real app, you'd likely redirect to the queue status page
-      setTimeout(() => {
-        setSelectedJobs([]);
-        setQueueSubmitted(false);
-        setLoading(false);
+      if (response.ok) {
+        setQueueSubmitted(true);
         
-        // Redirect to queue page
-        window.location.href = '/queue';
-      }, 1500);
+        // Success message
+        setTimeout(() => {
+          setSelectedJobs([]);
+          setQueueSubmitted(false);
+          setLoading(false);
+        }, 1500);
+      } else {
+        console.error('Error submitting jobs to queue:', await response.text());
+        setLoading(false);
+      }
     } catch (error) {
       console.error('Error submitting jobs to queue:', error);
       setLoading(false);
