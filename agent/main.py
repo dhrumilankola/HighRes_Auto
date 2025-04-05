@@ -1,27 +1,61 @@
+# agent/main.py
+
 import asyncio
-from resume_loader import load_resume_data
-from browser_computer import LocalPlaywrightComputer
-from agent_config import create_agent
-from form_filler import fill_basic_info, upload_resume, fill_demographics, fill_portfolio_and_linkedin, answer_open_ended_questions
+import logging
+import argparse
+from job_processor import job_processing_service
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("agent.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("agent_main")
 
 async def main():
-    resume = load_resume_data()
-    job_url = "https://job-boards.greenhouse.io/deepmind/jobs/6293472"
-
-    async with LocalPlaywrightComputer(job_url) as computer:
-        await computer.page.wait_for_load_state("networkidle")
-        print("✅ Page loaded")
-
-        agent = create_agent(computer)
-
-        await fill_basic_info(computer.page, resume)
-        await upload_resume(computer.page)
-        await fill_demographics(computer.page)
-        await fill_portfolio_and_linkedin(computer.page, resume)
-        await answer_open_ended_questions(computer.page, resume, job_url)
-
-        print("\n✅ Finished filling form. Please review manually.")
-        await computer.page.wait_for_timeout(10000)
+    parser = argparse.ArgumentParser(description='HIGHRES Job Application Automation')
+    parser.add_argument('--mode', choices=['service', 'single'], default='service',
+                      help='Run as service or process a single job (default: service)')
+    parser.add_argument('--job-id', help='Job ID to process (required for single mode)')
+    args = parser.parse_args()
+    
+    if args.mode == 'single':
+        if not args.job_id:
+            logger.error("Job ID is required for single mode")
+            return
+        
+        from queue_manager import QueueManager
+        from resume_loader import load_resume_data
+        
+        queue_manager = QueueManager()
+        resume = load_resume_data()
+        
+        # Find the job in the queued jobs
+        queued_jobs = queue_manager._read_queue(queue_manager.queued_path)
+        job = next((j for j in queued_jobs if j.get('id') == args.job_id), None)
+        
+        if not job:
+            logger.error(f"Job {args.job_id} not found in the queue")
+            return
+        
+        from job_processor import process_job
+        
+        # Process the job without moving it between queues
+        logger.info(f"Processing single job {args.job_id}")
+        success, message, details = await process_job(job, resume)
+        
+        logger.info(f"Job processing result: {success}")
+        logger.info(f"Message: {message}")
+        logger.info(f"Details: {details}")
+        
+    else:
+        # Run as a service
+        logger.info("Starting job processing service")
+        await job_processing_service()
 
 if __name__ == "__main__":
     asyncio.run(main())

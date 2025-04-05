@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .          
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./queue_system:/app/queue_system
+      - ./agent/screenshots:/app/screenshots  
+
+    environment:
+      - NODE_ENV=production
+    restart: always
+    networks:
+      - highres-network
+
+  agent:
+    build:
+      context: ./agent
+      dockerfile: Dockerfile
+    volumes:
+      - ./queue_system:/app/queue_system
+      - ./agent/screenshots:/app/screenshots
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
+    networks:
+      - highres-network
+
+networks:
+  highres-network:
+    driver: bridge
