@@ -3,4 +3,5 @@
 /agent/venv
 /agent/.env
 /agent/__pycache__
+/agent/screenshots
 /queue_system/venv

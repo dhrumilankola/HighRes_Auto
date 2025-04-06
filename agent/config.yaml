@@ -1,0 +1,144 @@
+# Configuration for HIGHRES Job Application Agent
+
+paths:
+  resume_dir: "./resume_data"
+  resume_json: "resume_data.json"
+  resume_pdf: "resume_data.pdf"
+  screenshots_dir: "screenshots"
+  queue_dir: "queue_system"
+  log_file: "agent.log"
+
+# Gemini API Key (Alternatively, set GOOGLE_API_KEY environment variable)
+# google_api_key: "YOUR_GOOGLE_API_KEY" # Keep this commented out or use .env
+
+agent_settings:
+  # Delays in seconds
+  delay_before_filling: 0.5
+  delay_between_actions: 0.2
+  delay_between_jobs: 8.0
+  # Timeouts in milliseconds
+  default_element_timeout: 7000
+  page_load_timeout: 45000
+  navigation_timeout: 40000
+  # Fuzzy matching threshold (0-100)
+  fuzzy_match_threshold: 85
+  # Max retry attempts for jobs
+  max_job_retries: 2 # Total 3 attempts (initial + 2 retries)
+  # Skip actual submission for testing
+  testing_mode: false # Set to true to prevent clicking submit
+
+# Keywords to map labels/ids/names to resume data or standard concepts
+field_keywords:
+  personal_info:
+    first_name: ["first name", "given name", "fname"]
+    last_name: ["last name", "family name", "surname", "lname"]
+    full_name: ["full name", "legal name", "your name"] # Will combine first/last
+    email: ["email", "email address"]
+    phone: ["phone", "mobile", "contact number"]
+    linkedin: ["linkedin"]
+    portfolio: ["portfolio", "personal website", "website url"]
+    address: ["address", "street"]
+    city: ["city"]
+    state: ["state", "province"]
+    zip_code: ["zip", "postal code", "zipcode"]
+    country: ["country"]
+  education:
+    school: ["school", "university", "college", "institution"]
+    degree: ["degree", "certification", "diploma", "level of education"]
+    major: ["major", "field of study", "area of study", "discipline"]
+    gpa: ["gpa", "grade point average"]
+    start_date: ["start date", "from date", "start year", "attended from"]
+    end_date: ["end date", "to date", "end year", "graduation date", "completion date"]
+  work_authorization:
+    authorized: ["authorized", "eligible", "legally authorized", "work authorization", "right to work"]
+    sponsorship: ["sponsorship", "visa sponsorship", "require sponsorship"]
+  demographics:
+    gender: ["gender"]
+    race_ethnicity: ["race", "ethnicity", "ethnic origin"]
+    veteran: ["veteran", "veteran status"]
+    disability: ["disability", "disability status"]
+    sexual_orientation: ["sexual orientation"]
+    transgender: ["transgender"]
+  source:
+    how_hear: ["hear about", "source", "how did you learn"]
+    referred: ["referred", "referral", "referred by"]
+  other:
+    worked_before: ["previously employed", "worked here before", "former employee"]
+    communication_opt_out: ["sms", "marketing", "promotional", "newsletter", "text message", "contact me about future", "keep me informed"]
+    agree_terms: ["agree", "terms", "privacy", "acknowledge", "accept", "consent", "confirm", "understand", "certify", "declare", "information is true"]
+
+# Standard answers/selections for common dropdowns, radios, checkboxes
+standard_answers:
+  yes_no:
+    yes: ["yes"]
+    no: ["no", "not applicable"] # Ensure 'no' is preferred if both match
+  work_authorization:
+    authorized: "Yes"
+    sponsorship: "No" # Assuming 'No' is the default unless resume specifies otherwise
+  demographics:
+    # Use specific options found on forms, these are examples
+    gender: "Male" # Or "Decline to self-identify" / "Non-binary" etc.
+    race_ethnicity: "Asian" # Could be "Two or more races", "Decline to self-identify"
+    veteran: "I am not a protected veteran" # Or "No", "I identify as one or more of the classifications of protected veterans", "Decline to self-identify"
+    disability: "No, I don't have a disability" # Or "Yes", "Decline to self-identify"
+    sexual_orientation: "Decline to self-identify"
+    transgender: "No" # Or "Yes", "Decline to self-identify"
+  source:
+    how_hear: "LinkedIn" # Common default
+    referred: "No"
+  other:
+    worked_before: "No"
+    communication_opt_out: false # False for checkboxes (uncheck), "No" for dropdowns/radios
+    agree_terms: true # True for checkboxes (check), "Yes" or specific agreement text for dropdowns/radios
+
+# Selectors that are relatively common or stable
+common_selectors:
+  submit_button: [
+    "button[type='submit']",
+    "input[type='submit']",
+    "button:has-text('Submit')",
+    "button:has-text('Apply')",
+    "button:has-text('Submit Application')",
+    "button:has-text('Send Application')",
+    "button:has-text('Send')",
+    "button:has-text('Continue')", # Might be multi-stage forms
+    ".submit-button",
+    "#submit-button",
+    "[data-automation-id='submitButton']", # Workday common
+    "[data-testid='submit']",
+    "button.submit",
+    "button.apply-button",
+    "button[data-action='submit']"
+  ]
+  custom_dropdown:
+    container: [ # Elements that might *contain* the input and the appearing list
+      "div[class*='select__control']", "div[class*='dropdown-trigger']",
+      "div[role='combobox']", "div[class*='autocomplete']",
+      "div.custom-select-container"
+      ]
+    input: ["input[type='text']", "input[role='combobox']", "input:not([type])"] # Input inside the container
+    list: [ # The list that appears
+      "div[class*='select__menu']", "div[class*='menu-list']", "ul[role='listbox']",
+      "div[class*='suggestions-container']", "div[class*='autocomplete-suggestions']"
+      ]
+    item: [ # A single item in the list
+      "div[class*='select__option']", "div[class*='option']", "li[role='option']",
+      "div[class*='suggestion-item']", "div[class*='autocomplete-option']"
+      ]
+  add_button: # Buttons to add repeating sections
+    education: ["button:has-text('Add Education')", "button[aria-label*='Add Education']", "[data-automation-id='Add Education']"]
+    experience: ["button:has-text('Add Experience')", "button[aria-label*='Add Work Experience']", "[data-automation-id='Add Experience']"]
+  error_message: [ # Common validation error indicators
+    ".error-message", "[role='alert']", ".validation-error", ".field-error", "div[class*='error']"
+  ]
+  captcha: [ # Common CAPTCHA indicators
+    "iframe[title*='reCAPTCHA']", "iframe[src*='recaptcha']",
+    "iframe[title*='hCaptcha']", "iframe[src*='hcaptcha']",
+    "div.cf-turnstile", "div.g-recaptcha"
+    ]
+  success_message: [ # Common post-submission success indicators
+    "text=application submitted", "text=thank you for applying",
+    "text=application received", "text=successfully submitted",
+    ".success-message", "#success-message", "text=success", "text=thank you",
+    "[data-automation-id='successMessage']"
+    ]
